@@ -1,22 +1,29 @@
 <footer>
     <div class="footer-container">
         <div class="footer-about">
-            <h3>About Us</h3>
-            <p>Providing quality services since 2023.</p>
+            <h3>About Mentor</h3>
+            <p>Mentor is dedicated to innovating the way we live by providing cutting-edge tech solutions.</p>
         </div>
         <div class="footer-links">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/testimonial">Testimonial</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
-        <div class="footer-jobs">
-            <h3>Contact</h3>
-            <p>Email us at support@example.com</p>
+        <div class="footer-job-offers">
+            <h3>Job Offers</h3>
+            <p>Subscribe to see Available Jobs</p>
+            <form action="/subscribe" method="POST">
+                <input type="email" name="email" placeholder="Your Email" required />
+                <button type="submit">Go to the jobs</button>
+            </form>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2024 Your Website Name. All rights reserved.
+        &copy; <%= new Date().getFullYear() %> Bilih. All rights reserved.
     </div>
 </footer>
