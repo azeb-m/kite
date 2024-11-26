@@ -10,7 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.render("index.ejs",{ title: 'Your Website Title' });
 });
-
+app.get("/admin", (req, res) => {
+    res.render("admin.ejs");
+  });
+  
 //app.get('/about', (req, res) => {
    // res.render('about', { title: 'About Us' });
 //});
