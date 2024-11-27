@@ -16,6 +16,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get("/", (req, res) => {
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
+app.get("/services", (req, res) => {
+  res.render("services.ejs");
+});
+
+//app.get('/about', (req, res) => {
+// res.render('about', { title: 'About Us' });
+//});
+
+//app.get('/contact', (req, res) => {
+//   res.render('contact', { title: 'Contact Us' });
+//});
+
   res.render("index", { title: "Your Website Title" });
 });
 
