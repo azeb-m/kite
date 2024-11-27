@@ -1,0 +1,60 @@
+/* Service Section */
+.service-section {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+.service-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+.service-section {
+  display: flex;
+  flex-direction: column; /* Keep vertical layout */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 50px 20px;
+  background-color: #fff;
+  height: 100vh; /* Optional: Full height of the viewport for demonstration */
+}
+
+.service-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Hover Effects */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
