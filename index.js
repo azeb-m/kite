@@ -39,13 +39,9 @@ app.get("/", (req, res) => {
   app.get("/Testimonials", (req, res) => {
     res.render("Testimonials.ejs");
   });
-  //app.get('/about', (req, res) => {
-  // res.render('about', { title: 'About Us' });
-  //});
+  ;
 
-  //app.get('/contact', (req, res) => {
-  //   res.render('contact', { title: 'Contact Us' });
-  //});
+  
 
 app.get("/about", (req, res) => {
   res.render("about.ejs");
@@ -85,7 +81,25 @@ app.get("/admin", (req, res) => {
     }
   });
   
-  
+  app.post("/jobs", async (req, res) => {
+  const { title, description, position, requirements } = req.body;
+
+  try {
+    // Insert the job details into the jobs table
+    const result = await db.query(
+      `INSERT INTO jobs (title, description, position, requirements)
+       VALUES ($1, $2, $3, $4) RETURNING *`,
+      [title, description, position, requirements]
+    );
+
+    const job = result.rows[0]; // Get the inserted job data
+
+    res.status(201).send("Job added successfully!");
+  } catch (err) {
+    console.error("Error inserting job:", err.message);
+    res.status(500).send("Error adding job to the database.");
+  }
+});
   
 //app.get('/about', (req, res) => {
 // res.render('about', { title: 'About Us' });
