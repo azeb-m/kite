@@ -38,6 +38,9 @@ app.get("/services", (req, res) => {
 app.get("/portfolio", (req, res) => {
   res.render("portfolio", { title: "Our Portfolio" });
 });
+app.get("/contact", (req, res) => {
+  res.render("contact", { title: "contact us" });
+});
 
 // Start the server
 app.listen(port, () => {
