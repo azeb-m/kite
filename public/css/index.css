@@ -1,3 +1,47 @@
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 10;
+  
+  
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+
+
+}
 body {
   color: #333;
   background-image: url('/images/background.webp'); /* Single background image */
