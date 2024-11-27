@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Admin Page */
+  .admin-page {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    height: 100vh;
+  }
+  
+  .admin-page .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .admin-page .container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .admin-page .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #007bff;
+    letter-spacing: 1px;
+  }
+  
+  .admin-page .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-page .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .admin-page .label {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .admin-page .input-field, 
+  .admin-page .textarea-field {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .admin-page .input-field:focus, 
+  .admin-page .textarea-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  .admin-page .textarea-field {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .admin-page .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .admin-page .submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .admin-page .submit-btn:active {
+    background-color: #003366;
+    transform: scale(1);
+  }
+  
+  .admin-page .message {
+    text-align: center;
+    color: green;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .admin-page .error-message {
+    text-align: center;
+    color: red;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Admin Page Form Input */
+  .admin-page .form-group {
+    position: relative;
+  }
+  
+  .admin-page .form-group input[type="email"],
+  .admin-page .form-group input[type="password"] {
+    padding-left: 40px;
+  }
+  
+  .admin-page .form-group .input-field::placeholder {
+    color: #888;
+    font-size: 15px;
+  }
+  
+  /* Job Form Specific */
+  .job-form .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .job-form .input-field, 
+  .job-form .textarea-field {
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .job-form .submit-btn {
+    background-color: #28a745;
+    font-size: 18px;
+  }
+  
+  .job-form .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .admin-page .container {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .admin-page .title {
+      font-size: 24px;
+    }
+  
+    .admin-page .form-group {
+      margin-bottom: 15px;
+    }
+  }
+  
+  
