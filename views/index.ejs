@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"> <!-- Link to your CSS -->
+    <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
+    
     <title><%= title %></title>
 </head>
 <body>
     <%- include('partials/header') %> <!-- Include the header -->
-    
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1>Welcome to Our Website!</h1>
+                <p>We're glad to have you here. Start exploring our site.</p>
+                <a href="#get-started" class="btn-get-started">Get Started</a>
+            </div>
+        </div>
+    </section>
     <%- include('partials/footer') %> <!-- Include the footer -->
 </body>
 </html>
