@@ -1,6 +1,6 @@
 <header>
   <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/index_header.css" />
 
   <div class="header-container">
     <!-- Logo Section -->
@@ -11,7 +11,7 @@
 
     <!-- Navigation Links -->
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
+      <li><a Class='active' href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
@@ -20,15 +20,3 @@
     </ul>
   </div>
 </header>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentLocation = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    navLinks.forEach(link => {
-      if (link.href.includes(currentLocation)) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
