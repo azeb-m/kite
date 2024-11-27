@@ -1,0 +1,87 @@
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 10;
+  
+  
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+
+
+}
+
+/* Footer */
+
+footer {
+  background-color: #333;
+
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+  margin-top: auto;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  flex-basis: 100%;
+}
+footer .footer-links a {
+  color: #fff;
+  text-decoration: none; 
+}
+
+/* Optional: Add hover effect for the links */
+footer .footer-links a:hover {
+  color: #45a049; /* A slightly darker shade for hover effect */
+
+}
