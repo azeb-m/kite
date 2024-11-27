@@ -3,16 +3,16 @@ import bodyParser from "body-parser";
 
 import pg from "pg"
 
-const db=new pg.Client({
+/* const db=new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"mentoradmin",
-    password:"bereket",
+    password:"esube",
     port:5433,
   });
   
   db.connect()
-
+*/
 import path from "path";
 
 const app = express();
@@ -53,7 +53,7 @@ app.get("/admin", (req, res) => {
     res.render("admin.ejs");
   });
   
-  app.post("/admin", async (req, res) => {
+ /* app.post("/admin", async (req, res) => {
     const email = req.body.username;
     const password = req.body.password;
   
@@ -100,7 +100,7 @@ app.get("/admin", (req, res) => {
     res.status(500).send("Error adding job to the database.");
   }
 });
-  
+ */ 
 //app.get('/about', (req, res) => {
 // res.render('about', { title: 'About Us' });
 //});
@@ -110,7 +110,7 @@ app.get("/admin", (req, res) => {
 //});
 
 
-  res.render("index", { title: "Your Website Title" });
+  res.render("index", { title: "Mentor" });
 });
 
 app.get("/portfolio", (req, res) => {

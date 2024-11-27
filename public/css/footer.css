@@ -38,7 +38,7 @@ footer .footer-links a:hover {
   color: #45a049; /* A slightly darker shade for hover effect */
 
 }
-button {
+.jobs {
     display: block;
     width: 100%;
     padding: 10px;
@@ -53,6 +53,6 @@ button {
 }
 
 /* Button hover effect */
-button:hover {
+.jobs:hover {
     background-color: #e0b050; /* Slightly lighter golden shade on hover */
 }
