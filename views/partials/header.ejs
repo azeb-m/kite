@@ -24,11 +24,11 @@
 </header>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    const currentLocation = window.location.pathname;
+    const currentLocation = window.location.pathname === '/' ? '/' : window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-links a');
 
     navLinks.forEach(link => {
-      if (link.href.includes(currentLocation)) {
+      if (link.getAttribute('href') === currentLocation) {
         link.classList.add('active');
       }
     });
