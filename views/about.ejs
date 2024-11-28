@@ -1,9 +1,10 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/about.css" />
+
 <body>
   <main>
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about-section">
       <h1>About Mentor</h1>
       <p>
         Mentor Knowledge Solutions PLC is an IT and Management Consulting firm
@@ -17,38 +18,98 @@
         cutting-edge technology that simplifies processes, enhances
         productivity, and fosters growth.
       </p>
-      
-      <button class="explore-btn" onclick="window.location.href='/services'">Explore our services</button>
+      <button class="explore-btn">Explore our service</button>
     </section>
 
-    <!-- Our Mission Section -->
-    <section class="mission-section">
-      <h2>Our Mission</h2>
-      <div class="mission-cards">
-        <div class="card">
-          <h3>Innovate</h3>
-          <p>
-            We strive to push the boundaries of what's possible, constantly
-            exploring new technologies and methodologies to deliver cutting-edge
-            solutions.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Empower</h3>
-          <p>
-            Our goal is to empower businesses and individuals with tools and
-            technologies that enhance their capabilities and drive success.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Connect</h3>
-          <p>
-            We believe in the power of connection, creating solutions that bring
-            people, businesses, and technologies together in meaningful ways.
-          </p>
-        </div>
+    <!-- Vision, Mission, and Values Section -->
+    <section class="details-section" id="details-section">
+      <div class="card" id="vision-card">
+        <h2>Our Vision</h2>
+        <p>
+          Unlocking technology potential to help organizations innovate, deliver
+          superior customer experiences, and perform better.
+        </p>
+        <button class="toggle-btn" onclick="displayExpandedSection('vision')">
+          View More
+        </button>
+      </div>
+
+      <div class="card" id="mission-card">
+        <h2>Our Mission</h2>
+        <p>
+          Provide proactive and responsive IT and management consulting services
+          to strengthen small and medium enterprises.
+        </p>
+        <button class="toggle-btn" onclick="displayExpandedSection('mission')">
+          View More
+        </button>
+      </div>
+
+      <div class="card" id="values-card">
+        <h2>Our Values</h2>
+        <p>
+          Working hard to make a difference, fostering communication, and
+          delivering innovation with quality.
+        </p>
+        <button class="toggle-btn" onclick="displayExpandedSection('values')">
+          View More
+        </button>
       </div>
     </section>
+
+    <!-- Expanded Content Section -->
+    <section class="expanded-section hidden" id="expanded-section">
+      <h2 id="expanded-title"></h2>
+      <p id="expanded-content"></p>
+      <button class="toggle-btn" onclick="restoreAllSections()">
+        View Less
+      </button>
+    </section>
   </main>
+
+  <script>
+    // Data for expanded content
+    const sectionsContent = {
+      vision: {
+        title: "Our Vision",
+        content:
+          "Unlocking technology potential to help organizations innovate, deliver superior customer experiences, and perform better. We strive to transform challenges into opportunities through innovation and creativity."
+      },
+      mission: {
+        title: "Our Mission",
+        content:
+          "<ul><li>Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger and more effective.</li><li>Offer custom application development services for enterprise and consumer apps.</li><li>Provide technology-enabled back-office and front-office business services with sourcing arrangements.</li><li>Create a platform strategy to attract top talent and foster workplace innovation and creativity.</li><li>Deliver real value to shareholders through consistent growth and profitability.</li><li>Foster entrepreneurship and business incubation to support sustainable economic growth.</li></ul>"
+      },
+      values: {
+        title: "Our Values",
+        content:
+          "<ul><li>Striving to handle each client with accountability and responsiveness.</li><li>Commitment to consistent delivery of quality and value through innovation.</li><li>Nurturing open communication, continuous learning, collaboration, and teamwork.</li><li>Commitment to impart knowledge, provide opportunity and mentorship, command respect.</li><li>Creating an atmosphere where all staff are respected and valued to foster creativity and innovation.</li></ul>"
+      }
+    };
+
+    function displayExpandedSection(section) {
+      // Hide all sections: about section, and the card sections (vision, mission, values)
+      document.getElementById("about-section").style.display = "none";
+      document.getElementById("details-section").style.display = "none";
+
+      // Show expanded section content
+      const expandedSection = document.getElementById("expanded-section");
+      expandedSection.querySelector("#expanded-title").innerText =
+        sectionsContent[section].title;
+      expandedSection.querySelector("#expanded-content").innerHTML =
+        sectionsContent[section].content;
+      expandedSection.style.display = "block";
+    }
+
+    function restoreAllSections() {
+      // Show back the original sections: About and the 3 cards (Vision, Mission, Values)
+      document.getElementById("about-section").style.display = "block";
+      document.getElementById("details-section").style.display = "flex"; // use flex to make them side by side
+
+      // Hide the expanded section
+      document.getElementById("expanded-section").style.display = "none";
+    }
+  </script>
+
+  <%- include('partials/footer') %>
 </body>
-<%- include('partials/footer') %>
