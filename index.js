@@ -14,6 +14,7 @@ import pg from "pg"
   
   db.connect()
 */
+
 const app = express();
 const port = 3000;
 
@@ -29,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Routes
+
 app.get("/", (req, res) => {
 
   app.get("/about", (req, res) => {
@@ -44,6 +46,7 @@ app.get("/", (req, res) => {
 
   
 
+
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
@@ -51,6 +54,7 @@ app.get("/services", (req, res) => {
   res.render("services.ejs");
 });
 app.get("/admin", (req, res) => {
+
     res.render("admin.ejs");
   });
   
@@ -102,6 +106,7 @@ app.get("/admin", (req, res) => {
   }
 });
  */ 
+
 //app.get('/about', (req, res) => {
 // res.render('about', { title: 'About Us' });
 //});
@@ -111,7 +116,9 @@ app.get("/admin", (req, res) => {
 //});
 
 
+
   res.render("index", { title: "Mentor" });
+
 });
 
 app.get("/portfolio", (req, res) => {
