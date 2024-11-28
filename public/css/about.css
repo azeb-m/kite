@@ -32,7 +32,9 @@ h2 {
 
 .explore-btn {
   padding: 10px 20px;
+
   background-color: #d9a23e;
+
   color: white;
   border: none;
   border-radius: 5px;
@@ -42,7 +44,22 @@ h2 {
 }
 
 .explore-btn:hover {
+
   background-color: #e0b050;
+
+
+/* Mission Section */
+.mission-section {
+  padding: 40px 20px;
+  background-color: #fff; /* White background for clean look */
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #333; /* Darker gray title */
+
 }
 
 /* Details Section */
@@ -65,9 +82,11 @@ h2 {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
 }
 
 .toggle-btn {

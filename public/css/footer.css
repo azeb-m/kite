@@ -1,0 +1,58 @@
+footer {
+  background-color: #333;
+
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+  margin-top: auto;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  flex-basis: 100%;
+}
+footer .footer-links a {
+  color: #fff;
+  text-decoration: none; 
+}
+
+/* Optional: Add hover effect for the links */
+footer .footer-links a:hover {
+  color: #45a049; /* A slightly darker shade for hover effect */
+
+}
+.jobs {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d9a23e; /* Golden yellow color for the button */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+.jobs:hover {
+    background-color: #e0b050; /* Slightly lighter golden shade on hover */
+}

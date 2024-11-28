@@ -1,25 +1,25 @@
 header {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
-  padding: 20px;
-  color: #fff;
+  background-color: #f7f7f7; /* Lighter background color for the header */
+  padding: 5px 10px; /* Reduced padding for a thinner and more compact header */
+  color: #111; /* Darker text color for better contrast */
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-
+  width: calc(100% - 15px); /* Reduced width to decrease space on sides even further */
+  margin: 0 7px; /* Further reduced margin to reduce space on sides */
   z-index: 10;
-  
-  
+  border-radius: 8px; /* Slightly rounded corners */
+  border: 1px solid f7f7f7; /* Light and subtle border */
 }
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1000px; /* Reduced max-width for a smaller container */
   margin: 0 auto;
   background-color: transparent;
-
 }
 
 .nav-links {
@@ -28,60 +28,39 @@ header {
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin-left: 10px; /* Reduced margin for closer spacing */
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #111; /* Darker color for the links */
+  font-size: 0.8rem; /* Smaller font size for links */
+  font-weight: bold; /* Bold text for links */
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #ddd;
-
-
+  color: #333; /* Darker color for hover effect */
 }
 
-/* Footer */
-
-footer {
-  background-color: #333;
-
-  color: #fff;
-  padding: 40px 20px;
-  font-size: 14px;
-  margin-top: auto;
-  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-.footer-container {
+/* Logo styling */
+.logo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-
+  align-items: center;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  color: #aaa;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-  flex-basis: 100%;
-}
-footer .footer-links a {
-  color: #fff;
-  text-decoration: none; 
+.logo-img {
+  height: 20px; /* Smaller height for the logo */
+  width: auto;  /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between logo and text */
 }
 
-/* Optional: Add hover effect for the links */
-footer .footer-links a:hover {
-  color: #45a049; /* A slightly darker shade for hover effect */
-
+.logo-text {
+  font-size: 1rem; /* Smaller font size for the logo text */
+  color: #111; /* Darker text color for the logo */
+  font-weight: bold; /* Bold text for logo */
+}
+.nav-links a.active {
+  color: #d9a23e; /* Highlight color for the active link */
+  font-weight: bold; /* Bold font for emphasis */
 }

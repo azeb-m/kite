@@ -1,15 +1,14 @@
 <header>
 
   <link rel="stylesheet" href="/css/style.css" />
-  <!-- Link to your CSS -->
   <link rel="stylesheet" href="/css/header.css" />
-  <!-- Link to your CSS -->
 
 
   <div class="header-container">
     <!-- Logo Section -->
     <div class="logo">
-      <h1>Logo</h1>
+      <img src="/images/logo.png" alt="Logo" class="logo-img" />
+      <h1 class="logo-text">MENTOR</h1>
     </div>
 
     <!-- Navigation Links -->
@@ -21,7 +20,17 @@
       <li><a href="/testimonials">Testimonials</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-
-    <!-- Navigation Links -->
   </div>
 </header>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const currentLocation = window.location.pathname === '/' ? '/' : window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentLocation) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
