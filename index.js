@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+import nodemailer from 'nodemailer';
+import path from "path";
 import pg from "pg"
 
 /* const db=new pg.Client({
@@ -13,7 +14,6 @@ import pg from "pg"
   
   db.connect()
 */
-import path from "path";
 
 const app = express();
 const port = 3000;
@@ -27,7 +27,10 @@ app.use(express.static("public"));
 // Use bodyParser for form submissions (if needed)
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 // Routes
+
 app.get("/", (req, res) => {
 
   app.get("/about", (req, res) => {
@@ -43,6 +46,7 @@ app.get("/", (req, res) => {
 
   
 
+
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
@@ -50,6 +54,7 @@ app.get("/services", (req, res) => {
   res.render("services.ejs");
 });
 app.get("/admin", (req, res) => {
+
     res.render("admin.ejs");
   });
   
@@ -101,6 +106,7 @@ app.get("/admin", (req, res) => {
   }
 });
  */ 
+
 //app.get('/about', (req, res) => {
 // res.render('about', { title: 'About Us' });
 //});
@@ -110,7 +116,9 @@ app.get("/admin", (req, res) => {
 //});
 
 
+
   res.render("index", { title: "Mentor" });
+
 });
 
 app.get("/portfolio", (req, res) => {
@@ -118,6 +126,17 @@ app.get("/portfolio", (req, res) => {
 });
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "contact us" });
+});
+
+
+app.get('/request-service', (req, res) => {
+    res.render('request', { title: 'Request a Service' });
+});
+
+// Handle form submission
+app.post('/request-service', (req, res) => {
+    const { name } = req.body; // Extract the user's name from the form
+    res.render('thank-you', { title: 'Thank You', name }); // Pass title and name to EJS
 });
 
 // Start the server
