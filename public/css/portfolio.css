@@ -30,10 +30,11 @@
   margin: 0 auto;
   height: 200px; /* Reduced height */
   border-radius: 0; /* Sharp corners */
-  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for sliding effect and opacity */
+  opacity: 0.9; /* Slightly more transparent item */
 }
 
-/* Even darker bluish overlay */
+/* Light gray overlay */
 .portfolio-item::after {
   content: "";
   position: absolute;
@@ -41,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(15, 30, 100, 0.5); /* Even darker bluish tone */
+  background-color: rgba(247, 247, 247, 0.2); /* Increased transparency (0.2) */
   z-index: 1; /* Ensure overlay appears above the image */
 }
 
@@ -52,38 +53,55 @@
   object-fit: cover;
   z-index: 0; /* Ensure image stays below the overlay */
   transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+  opacity: 1; /* Keep the image fully visible */
 }
 
-/* Portfolio Info */
 .portfolio-info {
   position: relative;
-  z-index: 2; /* Keep text above the overlay */
+  z-index: 2;
   padding: 10px;
-  text-align: left;
-  opacity: 1; /* Keep text visible by default */
-  transition: opacity 0.3s ease;
+  text-align: center; /* Center the text horizontally */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  height: 100%; /* Ensure the container takes full height */
+  opacity: 1; /* Make the portfolio info more transparent */
 }
 
 /* Make text bold and larger */
 .portfolio-info h3 {
   font-size: 1.2rem; /* Larger text */
   font-weight: bold; /* Bold text */
-  color: #fff; /* Adjust text color for visibility on overlay */
+  color: #000; /* Set text color to black */
   margin-bottom: 6px;
 }
 
 .portfolio-info p {
   font-size: 1rem; /* Larger paragraph text */
   font-weight: bold; /* Bold paragraph text */
-  color: #eee; /* Adjust paragraph color for readability */
+  color: #000; /* Set paragraph text color to black */
   line-height: 1.4;
+  visibility: hidden;
+  opacity: 0; /* Make paragraph text initially transparent */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
 /* Slide effect on hover */
 .portfolio-item:hover {
-  transform: scale(1.05); /* Slightly increase size of the portfolio item */
+  transform: scale(1.08); /* Slightly increase size of the portfolio item */
+  opacity: 1; /* Make the portfolio item fully visible on hover */
 }
 
 .portfolio-item:hover .portfolio-image {
-  transform: translateX(10px); /* Slide the image to the right by 10px */
+  transform: translateX(30px); /* Slide the image to the right by 10px */
+  opacity: 0.8;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1; /* Make portfolio info fully visible on hover */
+}
+
+.portfolio-item:hover .portfolio-info p {
+  visibility: visible; /* Make paragraph text visible */
+  opacity: 1; /* Fade in paragraph text on hover */
 }

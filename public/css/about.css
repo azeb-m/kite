@@ -27,7 +27,7 @@
 
 .explore-btn {
   padding: 10px 20px;
-  background-color: #007bff; /* Bright blue button */
+  background-color: #d9a23e ; /* Bright blue button */
   color: white;
   border: none;
   border-radius: 5px;
@@ -37,7 +37,7 @@
 }
 
 .explore-btn:hover {
-  background-color: #0056b3; /* Darker blue for hover effect */
+  background-color: #e0b050; /* Darker blue for hover effect */
 }
 
 /* Mission Section */
@@ -71,7 +71,7 @@
 .card h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #007bff; /* Bright blue heading */
+  color: #d9a23e; /* Bright blue heading */
 }
 
 .card p {
