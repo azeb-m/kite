@@ -106,21 +106,21 @@ select:focus {
 
 /* Fancy Submit Button */
 .btn-submit {
-    background-color: #ffd700; /* Golden Yellow */
-    color: #000; /* Black text */
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: bold;
+   display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d9a23e; /* Golden yellow color for the button */
+    color: #ffffff; /* White text for contrast */
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .btn-submit:hover {
-    background-color: #f1c40f; /* Slightly darker yellow */
+    background-color: #e0b050; /* Slightly darker yellow */
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
