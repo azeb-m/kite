@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Offers</title>
+  <link rel="stylesheet" href="/css/jobs-list.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <div class="job-list-container">
+    <h2>Available Job Offers</h2>
+    <% if (jobs.length === 0) { %>
+      <p>No job offers available at the moment. Please check back later.</p>
+    <% } else { %>
+      <% jobs.forEach(job => { %>
+        <div class="job-item">
+          <h3><%= job.title %></h3>
+          <p><%= job.description %></p>
+          <p><strong>Position:</strong> <%= job.position %></p>
+          <p><strong>Requirements:</strong> <%= job.requirements %></p>
+          
+        
+          <form action="/apply/<%= job.id %>" method="POST">
+            <input type="text" name="applicantName" placeholder="Your Name" required />
+            <input type="email" name="applicantEmail" placeholder="Your Email" required />
+            <button type="submit">Apply</button>
+          </form>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+
+  <!-- Include Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>
+

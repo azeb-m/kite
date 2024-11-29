@@ -1,0 +1,71 @@
+/* Styling specific to the job list page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .job-list-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .job-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  .job-item h3 {
+    font-size: 1.5rem;
+    color: #444444;
+    margin-bottom: 10px;
+  }
+  
+  .job-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #666666;
+  }
+  
+  .job-item form {
+    margin-top: 15px;
+  }
+  
+  .job-item input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: calc(50% - 20px);
+  }
+  
+  .job-item button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .job-item button:hover {
+    background-color: #0056b3;
+  }
+  

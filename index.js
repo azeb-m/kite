@@ -4,11 +4,11 @@ import nodemailer from 'nodemailer';
 import path from "path";
 import pg from "pg"
 
-/* const db=new pg.Client({
+ /*const db=new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"mentoradmin",
-    password:"esube",
+    password:"bereket",
     port:5433,
   });
   
@@ -39,6 +39,10 @@ app.get("/", (req, res) => {
   app.get("/services", (req, res) => {
     res.render("services.ejs");
   });
+
+  
+
+
   app.get("/Testimonials", (req, res) => {
     res.render("Testimonials.ejs");
   });
@@ -58,7 +62,7 @@ app.get("/admin", (req, res) => {
     res.render("admin.ejs");
   });
   
- /* app.post("/admin", async (req, res) => {
+  /*app.post("/admin", async (req, res) => {
     const email = req.body.username;
     const password = req.body.password;
   
@@ -105,7 +109,41 @@ app.get("/admin", (req, res) => {
     res.status(500).send("Error adding job to the database.");
   }
 });
- */ 
+ 
+
+// Route to display all available jobs to applicants
+app.get('/jobs-list', async (req, res) => {
+  try {
+    const result = await db.query('SELECT * FROM jobs');
+    const jobs = result.rows;
+
+    res.render('jobs-list', { jobs });
+  } catch (err) {
+    console.error('Error fetching jobs:', err.message);
+    res.status(500).send('Error loading jobs.');
+  }
+});
+
+app.post('/apply/:jobId', async (req, res) => {
+  const { jobId } = req.params; 
+  const { applicantName, applicantEmail } = req.body; 
+  try {
+    
+    await db.query(
+      `INSERT INTO applications (job_id, applicant_name, applicant_email)
+       VALUES ($1, $2, $3)`,
+      [jobId, applicantName, applicantEmail]
+    );
+
+   
+    res.send("Your application has been submitted successfully!");
+  } catch (err) {
+    console.error('Error submitting application:', err.message);
+    res.status(500).send("There was an error submitting your application. Please try again.");
+  }
+});
+*/
+
 
 //app.get('/about', (req, res) => {
 // res.render('about', { title: 'About Us' });
@@ -133,13 +171,13 @@ app.get('/request-service', (req, res) => {
     res.render('request', { title: 'Request a Service' });
 });
 
-// Handle form submission
+
 app.post('/request-service', (req, res) => {
     const { name } = req.body; // Extract the user's name from the form
     res.render('thank-you', { title: 'Thank You', name }); // Pass title and name to EJS
 });
 
-// Start the server
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
