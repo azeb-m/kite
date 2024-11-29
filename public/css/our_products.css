@@ -1,0 +1,145 @@
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px; /* Add space between the header and the first product card */
+}
+
+/* Our Products Section */
+.products-section {
+  padding: 60px 15px;
+  background-color: #f5f5f5;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start; /* Align all items to the left by default */
+}
+
+/* Product Item */
+.product-item {
+  display: flex; /* Flexbox to align the image and text side by side */
+  align-items: center; /* Vertically align items in the center */
+  width: 75%; /* Set the item to take up 75% of the screen width */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Start further below */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+  will-change: opacity, transform;
+  margin: 0 auto; /* Center align the product item */
+}
+
+/* Product Image */
+.product-image {
+  width: 40%; /* Image takes 40% of the item's width */
+  height: 300px; /* Adjust height to your preference */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and text */
+}
+
+/* Product Info */
+.product-info {
+  flex: 1; /* Allow the text to take the remaining space */
+}
+
+.product-item h3 {
+  font-size: 2rem; /* Larger heading font size */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Functionalities List */
+.functionalities-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.functionalities-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.functionalities-list li::before {
+  content: "✔"; /* Add a checkmark icon before each list item */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d9a23e;
+}
+
+/* Scroll-In Effect */
+.product-item {
+  opacity: 0;
+  transform: translateY(100px); /* Start further below */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product-item.show {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide to original position */
+}
+
+/* Align products to left for odd and right for even */
+.products-container .product-item:nth-child(odd) {
+  align-self: flex-start; /* Align odd items to the left */
+}
+
+.products-container .product-item:nth-child(even) {
+  align-self: flex-end; /* Align even items to the right */
+}
+
+/* Functionalities Offered Title */
+.product-info h4 {
+  font-size: 1rem; /* Reduced font size */
+  font-weight: bold;
+  color: #d9a23e; /* Keep the same yellow color */
+  margin-bottom: 5px; /* Reduced space between title and list */
+  text-transform: uppercase; /* Capitalized title */
+}
+
+/* Functionalities List */
+.functionalities-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0; /* Reduced margin-top to bring the list closer to the title */
+}
+
+.functionalities-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.functionalities-list li::before {
+  content: "✔"; /* Add a checkmark icon before each list item */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d9a23e; /* Bullet color */
+}
+
+/* Section Header */
+.section-header h2 {
+  text-align: center;
+  margin-bottom: 30px; /* Space between the section header and the first card */
+}

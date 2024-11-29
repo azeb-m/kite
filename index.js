@@ -159,8 +159,8 @@ app.post('/apply/:jobId', async (req, res) => {
 
 });
 
-app.get("/portfolio", (req, res) => {
-  res.render("portfolio", { title: "Our Portfolio" });
+app.get("/our_products", (req, res) => {
+  res.render("our_products", { title: "Our products" });
 });
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "contact us" });
