@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
-    
+    <link rel="stylesheet" href="/css/portfolio.css"> <!-- Link to portfolio CSS -->
     <title><%= title %></title>
+    <script src="/js/script.js"></script>
 </head>
 <body>
-
     <%- include('partials/header') %> <!-- Include the header -->
 
-    <!-- Include the header -->
+    <!-- Welcome Section -->
     <section class="welcome-section">
         <div class="welcome-container">
             <div class="welcome-text">
@@ -23,6 +22,14 @@
             </div>
         </div>
     </section>
-    <%- include('partials/footer') %> <!-- Include the footer -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-section" class="portfolio-section">
+        <%- include('portfolio') %> <!-- Include the portfolio -->
+    </section>
+
+   
+    
+
 </body>
 </html>

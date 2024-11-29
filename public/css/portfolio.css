@@ -21,6 +21,7 @@
   margin: 0 auto; /* Center the grid horizontally */
 }
 
+
 .portfolio-item {
   position: relative; /* Required for the overlay */
   background-color: #fff;
@@ -104,4 +105,24 @@
 .portfolio-item:hover .portfolio-info p {
   visibility: visible; /* Make paragraph text visible */
   opacity: 1; /* Fade in paragraph text on hover */
+}
+
+/* Portfolio Item Initial State */
+.portfolio-item {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(100px); /* Start farther below for a more dramatic effect */
+  transition: opacity 1s ease, transform 1s ease; /* Slower, smoother animation */
+}
+
+/* Portfolio Item Visible State */
+.portfolio-item.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Moves to its original position */
+}
+
+
+/* Position the Last Item in the 2nd Column of the 3rd Row */
+.portfolio-item:last-child {
+  grid-column: 2; /* Position in the 2nd column */
+  grid-row: 3; /* Position in the 3rd row */
 }
