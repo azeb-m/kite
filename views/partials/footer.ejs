@@ -1,32 +1,36 @@
-<link rel="stylesheet" href="/css/style.css"> <!-- Link to your CSS -->
-<link rel="stylesheet" href="/css/footer.css"> <!-- Link to your CSS -->
+<link rel="stylesheet" href="/css/style.css" />
+<!-- Link to your CSS -->
+<link rel="stylesheet" href="/css/footer.css" />
+<!-- Link to your CSS -->
 <footer>
-    <div class="footer-container">
-        <div class="footer-about">
-            <h3>About Mentor</h3>
-            <p>Mentor is dedicated to innovating the way we live by providing cutting-edge tech solutions.</p>
-        </div>
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/testimonial">Testimonial</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-job-offers">
-            <h3>Job Offers</h3>
-            <p>Subscribe to see Available Jobs</p>
-            <form action="/subscribe" method="POST">
-                <input type="email" name="email" placeholder="Your Email" required />
-                <button class= 'jobs' type="submit">Go to the jobs</button>
-            </form>
-        </div>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Mentor</h3>
+      <p>
+        Mentor is dedicated to innovating the way we live by providing
+        cutting-edge tech solutions.
+      </p>
     </div>
-    <div class="footer-bottom">
-        &copy; <%= new Date().getFullYear() %> Mentor. All rights reserved.
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/Testimonials">Testimonial</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </div>
+    <div class="footer-job-offers">
+      <h3>Job Offers</h3>
+      <p>Subscribe to see Available Jobs</p>
+      <form action="/subscribe" method="POST">
+        <input type="email" name="email" placeholder="Your Email" required />
+        <button class="jobs" type="submit">Go to the jobs</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <%= new Date().getFullYear() %> Mentor. All rights reserved.
+  </div>
 </footer>
-
