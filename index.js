@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from 'nodemailer';
 import path from "path";
+
 /* import pg from "pg"
 
 /* const db=new pg.Client({
@@ -164,17 +165,77 @@ app.get("/our_products", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "contact us" });
 });
+app.post("/contact", async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail", // Or use 'smtp.ethereal.email' for testing
+      auth: {
+        user: "azebmehrete13@gmail.com", // Your email
+        pass: "crbr inga ohvv sojb", // Your email password (use App Password if 2FA is enabled)
+      },
+    });
+
+    const mailOptions = {
+      from: email,
+      to: "azebmehrete13@gmail.com", // The email you want to receive messages at
+      subject: `Contact Form Submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
+
+    // Send the email
+    await transporter.sendMail(mailOptions);
+    res.render("thank-you", { title: "Thank You", name });
+    
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).send("An error occurred. Please try again later.");
+  }
+});
 
 
 app.get('/request-service', (req, res) => {
     res.render('request', { title: 'Request a Service' });
 });
 
+app.post("/request-service", async (req, res) => {
+  const { name, email, serviceType, details } = req.body;
+  // Setup Nodemailer transporter
+  const transporter = nodemailer.createTransport({
+    service: "gmail", // Use your email service (e.g., Gmail, Outlook)
+    auth: {
+      user: "azebmehrete13@gmail.com", // Your email
+      pass: "crbr inga ohvv sojb", // Replace with your generated app password
+    },
+  });
 
-app.post('/request-service', (req, res) => {
-    const { name } = req.body; // Extract the user's name from the form
-    res.render('thank-you', { title: 'Thank You', name }); // Pass title and name to EJS
+  // Configure email options
+  const mailOptions = {
+    from: email, // Sender's email
+    to: "azebmehrete13@gmail.com", // Receiver's email (you can change this)
+    subject: `Service Request: ${serviceType}`,
+    text: `
+            New service request from ${name} (${email}):
+            Service Type: ${serviceType}
+            Details: ${details || "No additional details provided."}
+        `,
+  };
+
+  try {
+    // Send the email
+    await transporter.sendMail(mailOptions);
+    res
+      .status(200)
+      res.render("thank-you", { title: "Thank You", name });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res
+      .status(500)
+      .send("An error occurred while sending your request. Please try again.");
+  }
 });
+
 
 
 app.listen(port, () => {
