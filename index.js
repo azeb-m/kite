@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from 'nodemailer';
 import path from "path";
-import pg from "pg"
+/* import pg from "pg"
 
 /* const db=new pg.Client({
     user:"postgres",
