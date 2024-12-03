@@ -9,27 +9,49 @@
     <title><%= title %></title>
     <script src="/js/script.js"></script>
 </head>
+
 <body>
     <%- include('partials/header') %> <!-- Include the header -->
 
     <!-- Welcome Section -->
     <section class="welcome-section">
         <div class="welcome-container">
+            <!-- Text Section on the Left -->
             <div class="welcome-text">
-                <h1>Welcome to MENTOR!</h1>
-                <p>We're glad to have you here. Start exploring our site.</p>
-                <a href="/request-service" class="btn-get-started">Get Started</a>
+                <!-- Hero Section (Direct Content) -->
+                <section class="hero-section">
+                    <h1 class="main-title">Transforming Cancer Care with AI Precision Medicine</h1>
+                    <p class="subtitle">
+                        Empowering physicians with advanced multi-modal tools to improve treatment selection and patient outcomes.
+                    </p>
+                    <a href="/request-service" class="cta-button">Get Started</a>
+                </section>
+            </div>
+
+            <!-- Image Section on the Right -->
+            <div class="welcome-image">
+                <img src="/images/welcome-image.jpeg" alt="Welcome to Mentor" />
             </div>
         </div>
     </section>
+
+    <section class="mission-section">
+        <div class="mission-content">
+          <span class="mission-label">OUR MISSION</span>
+          <h2 class="mission-text">
+            Our mission is to empower innovation by transforming knowledge into
+             actionable solutions, enabling businesses to thrive in a rapidly evolving world. We leverage cutting-edge 
+             technology and deep expertise to deliver insights that drive growth, improve decision-making, and foster lasting success for our clients.
+          </h2>
+        </div>
+      </section>
+      
 
     <!-- Portfolio Section -->
     <section id="portfolio-section" class="portfolio-section">
         <%- include('portfolio') %> <!-- Include the portfolio -->
     </section>
 
-   
-    
-
 </body>
+
 </html>
