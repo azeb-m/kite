@@ -3,8 +3,8 @@ import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import path from "path";
 
-/* import pg from "pg"
-
+ import pg from "pg"
+/*
  const db=new pg.Client({
     user:"postgres",
     host:"localhost",
@@ -14,7 +14,7 @@ import path from "path";
   });
   
   db.connect()
-
+*/
 const app = express();
 const port = 3000;
 
