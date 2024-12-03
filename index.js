@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import path from "path";
 
 /* import pg from "pg"
@@ -195,8 +195,8 @@ app.post("/contact", async (req, res) => {
 });
 
 
-app.get('/request-service', (req, res) => {
-    res.render('request', { title: 'Request a Service' });
+app.get("/request-service", (req, res) => {
+  res.render("request", { title: "Request a Service" });
 });
 
 app.post("/request-service", async (req, res) => {
@@ -206,8 +206,8 @@ app.post("/request-service", async (req, res) => {
     service: "gmail", // Use your email service (e.g., Gmail, Outlook)
     auth: {
       user: "azebmehrete13@gmail.com", // Your email
-      pass: "crbr inga ohvv sojb", // Replace with your generated app password
-    },
+      pass: "crbr inga ohvv sojb" // Replace with your generated app password
+    }
   });
 
   // Configure email options
@@ -219,15 +219,14 @@ app.post("/request-service", async (req, res) => {
             New service request from ${name} (${email}):
             Service Type: ${serviceType}
             Details: ${details || "No additional details provided."}
-        `,
+        `
   };
 
   try {
     // Send the email
     await transporter.sendMail(mailOptions);
-    res
-      .status(200)
-      res.render("thank-you", { title: "Thank You", name });
+    res.status(200);
+    res.render("thank-you", { title: "Thank You", name });
   } catch (error) {
     console.error("Error sending email:", error);
     res
@@ -236,8 +235,7 @@ app.post("/request-service", async (req, res) => {
   }
 });
 
-
-
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+*/
