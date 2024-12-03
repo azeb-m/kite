@@ -27,3 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Trigger the function once on page load to check visibility
   handleScroll();
 });
+
