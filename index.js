@@ -5,7 +5,7 @@ import path from "path";
 
 /* import pg from "pg"
 
-/* const db=new pg.Client({
+ const db=new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"mentoradmin",
@@ -14,7 +14,7 @@ import path from "path";
   });
   
   db.connect()
-*/
+
 const app = express();
 const port = 3000;
 
@@ -62,7 +62,7 @@ app.get("/admin", (req, res) => {
     res.render("admin.ejs");
   });
   
- /* app.post("/admin", async (req, res) => {
+ app.post("/admin", async (req, res) => {
     const email = req.body.username;
     const password = req.body.password;
   
@@ -142,7 +142,7 @@ app.post('/apply/:jobId', async (req, res) => {
     res.status(500).send("There was an error submitting your application. Please try again.");
   }
 });
-*/
+
 
 
 //app.get('/about', (req, res) => {
