@@ -78,18 +78,18 @@ body {
   background-color: #fff;
 }
 
-.main-title {
-  font-size: 2.5rem; 
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 20px;
-}
+
+
 
 .subtitle {
-  font-size: 1.2rem; 
-  line-height: 1.6;
-  color: #555; 
+  font-size: 1.4rem; /* Slightly larger for better readability */
+  color: #173D3E; /* Complementary green tone */
+  text-align: center; /* Align with the title */
+  line-height: 1.8; /* Comfortable spacing between lines */
+  margin-top: 10px;
   margin-bottom: 30px;
+  font-style: italic; /* Adds a touch of elegance */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
 }
 
 .cta-button {
@@ -185,6 +185,40 @@ body {
   font-size: 1.8rem; /* Larger text size for visibility */
   font-weight: 400;
   line-height: 1.6; /* Better spacing between lines */
+}
+
+/* Our Strong Customers Section */
+.customers-section {
+  margin-top: 50px; /* Adds space above the section */
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.customers-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px; /* Space between title and logos */
+}
+
+.customer-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.customer-logos img {
+  height: 70px; /* Adjust height of the logos */
+  max-width: 100%; /* Ensure logos are responsive */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Hover effect on logos */
+.customer-logos img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 
