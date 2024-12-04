@@ -4,6 +4,9 @@
 <!-- Link to your CSS -->
 <footer>
     <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/images/logo.jpeg"  alt="Mentor Logo" />
+        </div>
         <div class="footer-about">
             <h3>About Mentor</h3>
             <p>Mentor is dedicated to innovating the way we live by providing cutting-edge tech solutions.</p>
@@ -22,11 +25,10 @@
             <h3>Job Offers</h3>
             <p>Subscribe to see Available Jobs</p>
             <form action="/jobs-list" method="GET">
-              <input type="email" name="email" placeholder="Your Email" required />
-              <button class='jobs' type="submit">Go to the jobs</button>
+                <input type="email" name="email" placeholder="Your Email" required />
+                <button class="jobs" type="submit">Go to the jobs</button>
             </form>
-          </div>
-          
+        </div>
     </div>
     <div class="footer-bottom">
         &copy; <%= new Date().getFullYear() %> Mentor. All rights reserved.
