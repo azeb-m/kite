@@ -1,124 +1,53 @@
-<link rel="stylesheet" href="/css/about.css" />
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Our Mission</h1>
-      <p>
-        Revolutionizing personalized medicine through innovative technology.
-        Empowering physicians with tools for effective treatments, enhancing
-        patient care, and driving better health outcomes.
-      </p>
-    </div>
-    <div class="hero-image">
-      <img src="/images/mission-image.png" alt="Mission Image" />
-    </div>
-  </header>
-
-  <!-- Our Story Section -->
-  <section class="story">
-    <div class="story-image">
-      <img src="/images/story-image.jpg" alt="Story Image" />
-    </div>
-    <div class="story-text">
-      <h2>Our Story</h2>
-      <p>
-        Ataraxis spun out of New York University and raised a Seed round in
-        2023.
-      </p>
-    </div>
-  </section>
-
+  <link rel="stylesheet" href="/css/about.css" />
+  <script src="/js/scripts.js"></script>
+  <%- include('partials/header') %>
   <main>
-    <!-- About Section -->
-    <section class="details-section" id="details-section">
-      <div class="card" id="vision-card">
-        <h2>Our Vision</h2>
-        <p>
-          Unlocking technology potential to help organizations innovate, deliver
-          superior customer experiences, and perform better.
-        </p>
-        <button class="toggle-btn" onclick="displayExpandedSection('vision')">
-          View More
-        </button>
-      </div>
-
-      <div class="card" id="mission-card">
-        <h2>Our Mission</h2>
-        <p>
-          Provide proactive and responsive IT and management consulting services
-          to strengthen small and medium enterprises.
-        </p>
-        <button class="toggle-btn" onclick="displayExpandedSection('mission')">
-          View More
-        </button>
-      </div>
-
-      <div class="card" id="values-card">
-        <h2>Our Values</h2>
-        <p>
-          Working hard to make a difference, fostering communication, and
-          delivering innovation with quality.
-        </p>
-        <button class="toggle-btn" onclick="displayExpandedSection('values')">
-          View More
-        </button>
+    <!-- About Us Section with Image -->
+    <section id="about" class="section">
+      <div class="content">
+        <div class="text">
+          <h1>About Us</h1>
+          <p>Mentor Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.</p>
+        </div>
+        <div class="image">
+          <img src="/images/mission-image.png" alt="About Us" />
+        </div>
       </div>
     </section>
 
-    <!-- Expanded Content Section -->
-    <section class="expanded-section hidden" id="expanded-section">
-      <h2 id="expanded-title"></h2>
-      <p id="expanded-content"></p>
-      <button class="toggle-btn" onclick="restoreAllSections()">
-        View Less
-      </button>
+    <!-- Vision Section -->
+    <section id="vision" class="section center-aligned">
+      <h2>Our Vision</h2>
+      <p>Unlocking technology potential to help organizations innovate, deliver superior customer experience, and perform better.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="section center-aligned">
+      <h2>Our Mission</h2>
+      <ul>
+        <li>Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
+        <li>Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
+        <li>Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
+        <li>Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
+        <li>Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
+        <li>Foster entrepreneurship and business incubation.</li>
+        <li>Deliver real value to shareholders through consistent growth and profitability.</li>
+      </ul>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="section center-aligned">
+      <h2>Our Values</h2>
+      <ul>
+        <li>Working hard to make a difference in the organizations we serve.</li>
+        <li>Striving to handle each client with accountability and responsiveness.</li>
+        <li>Commitment to consistent delivery of quality and value through innovation.</li>
+        <li>Nurturing open communication, continuous learning, collaboration, and teamwork.</li>
+        <li>Commitment to impart knowledge, provide opportunity and mentorship, and command respect.</li>
+        <li>Creating an atmosphere where all staff are respected and valued.</li>
+      </ul>
     </section>
   </main>
-
-  <script>
-    // Data for expanded content
-    const sectionsContent = {
-      vision: {
-        title: "Our Vision",
-        content:
-          "Unlocking technology potential to help organizations innovate, deliver superior customer experiences, and perform better. We strive to transform challenges into opportunities through innovation and creativity."
-      },
-      mission: {
-        title: "Our Mission",
-        content:
-          "<ul><li>Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger and more effective.</li><li>Offer custom application development services for enterprise and consumer apps.</li><li>Provide technology-enabled back-office and front-office business services with sourcing arrangements.</li><li>Create a platform strategy to attract top talent and foster workplace innovation and creativity.</li><li>Deliver real value to shareholders through consistent growth and profitability.</li><li>Foster entrepreneurship and business incubation to support sustainable economic growth.</li></ul>"
-      },
-      values: {
-        title: "Our Values",
-        content:
-          "<ul><li>Striving to handle each client with accountability and responsiveness.</li><li>Commitment to consistent delivery of quality and value through innovation.</li><li>Nurturing open communication, continuous learning, collaboration, and teamwork.</li><li>Commitment to impart knowledge, provide opportunity and mentorship, command respect.</li><li>Creating an atmosphere where all staff are respected and valued to foster creativity and innovation.</li></ul>"
-      }
-    };
-
-    function displayExpandedSection(section) {
-      // Hide all sections: about section, and the card sections (vision, mission, values)
-      document.getElementById("about-section").style.display = "none";
-      document.getElementById("details-section").style.display = "none";
-
-      // Show expanded section content
-      const expandedSection = document.getElementById("expanded-section");
-      expandedSection.querySelector("#expanded-title").innerText =
-        sectionsContent[section].title;
-      expandedSection.querySelector("#expanded-content").innerHTML =
-        sectionsContent[section].content;
-      expandedSection.style.display = "block";
-    }
-
-    function restoreAllSections() {
-      // Show back the original sections: About and the 3 cards (Vision, Mission, Values)
-      document.getElementById("about-section").style.display = "block";
-      document.getElementById("details-section").style.display = "flex"; // use flex to make them side by side
-
-      // Hide the expanded section
-      document.getElementById("expanded-section").style.display = "none";
-    }
-  </script>
-
   <%- include('partials/footer') %>
 </body>
