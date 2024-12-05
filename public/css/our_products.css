@@ -1,7 +1,27 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
 /* Section Header */
 .section-header {
   text-align: center;
-  margin-bottom: 30px; /* Add space between the header and the first product card */
+  margin-bottom: 30px; /* Space between the section header and the first card */
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #d9a23e;
+  display: inline-block;
 }
 
 /* Our Products Section */
@@ -16,7 +36,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: flex-start; /* Align all items to the left by default */
 }
 
 /* Product Item */
@@ -28,11 +47,20 @@
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; /* Initially hidden for scroll effect */
   transform: translateY(100px); /* Start further below */
   transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
   will-change: opacity, transform;
   margin: 0 auto; /* Center align the product item */
+}
+
+/* Alternate Alignment */
+.product-item:nth-child(odd) {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+.product-item:nth-child(even) {
+  flex-direction: row-reverse; /* Image on the right, text on the left */
 }
 
 /* Product Image */
@@ -42,38 +70,50 @@
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  margin-right: 20px; /* Space between image and text */
+  margin: 0 20px; /* Space between image and text */
 }
 
 /* Product Info */
 .product-info {
   flex: 1; /* Allow the text to take the remaining space */
+  padding: 0 20px;
 }
 
 .product-item h3 {
-  font-size: 2rem; /* Larger heading font size */
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #333;
 }
 
 .product-item p {
   font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Functionalities Title */
+.product-info h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #d9a23e; /* Highlighted yellow color */
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 /* Functionalities List */
 .functionalities-list {
   list-style-type: none;
   padding: 0;
-  margin-top: 10px;
+  margin: 0;
 }
 
 .functionalities-list li {
   font-size: 1rem;
   color: #333;
   margin-bottom: 8px;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   position: relative;
 }
 
@@ -82,7 +122,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #d9a23e;
+  color: #d9a23e; /* Bullet color */
 }
 
 /* Scroll-In Effect */
@@ -97,49 +137,20 @@
   transform: translateY(0); /* Slide to original position */
 }
 
-/* Align products to left for odd and right for even */
-.products-container .product-item:nth-child(odd) {
-  align-self: flex-start; /* Align odd items to the left */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-item {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center-align text for better aesthetics */
+  }
 
-.products-container .product-item:nth-child(even) {
-  align-self: flex-end; /* Align even items to the right */
-}
+  .product-image {
+    width: 100%; /* Full width for images */
+    height: 200px; /* Adjust height for smaller screens */
+    margin: 0 0 15px 0; /* Add margin below image */
+  }
 
-/* Functionalities Offered Title */
-.product-info h4 {
-  font-size: 1rem; /* Reduced font size */
-  font-weight: bold;
-  color: #d9a23e; /* Keep the same yellow color */
-  margin-bottom: 5px; /* Reduced space between title and list */
-  text-transform: uppercase; /* Capitalized title */
-}
-
-/* Functionalities List */
-.functionalities-list {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 0; /* Reduced margin-top to bring the list closer to the title */
-}
-
-.functionalities-list li {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 8px;
-  padding-left: 1rem;
-  position: relative;
-}
-
-.functionalities-list li::before {
-  content: "✔"; /* Add a checkmark icon before each list item */
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #d9a23e; /* Bullet color */
-}
-
-/* Section Header */
-.section-header h2 {
-  text-align: center;
-  margin-bottom: 30px; /* Space between the section header and the first card */
+  .product-info {
+    padding: 10px 0; /* Reduce padding for smaller screens */
+  }
 }

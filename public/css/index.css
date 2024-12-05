@@ -95,19 +95,19 @@ body {
 .cta-button {
   display: inline-block;
   padding: 12px 20px;
-  background-color: #D9A23E; 
+  background-color: #d9a23e; 
   color: #FFFFFF; 
   text-decoration: none; 
   font-size: 1.1rem; 
   font-weight: bold;
-  border: 2px solid #D9A23E; 
+  border: 2px solid #d9a23e; 
   border-radius: 8px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #FFD54F; 
+  background-color: #d9a23e; 
   color: #000; 
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
   transform: scale(1.05); 
@@ -139,8 +139,8 @@ body {
   left: 0;
   width: 300px;
   height: 300px;
-  border-top: 2px solid #D9A23E; 
-  border-left: 2px solid #D9A23E; 
+  border-top: 2px solid #d9a23e; 
+  border-left: 2px solid #d9a23e; 
   transform: rotate(-45deg); 
   z-index: 0;
 }
@@ -152,8 +152,8 @@ body {
   left: 20%;
   width: 500px;
   height: 500px;
-  border-top: 2px solid #D9A23E;
-  border-left: 2px solid #D9A23E;
+  border-top: 2px solid #d9a23e;
+  border-left: 2px solid #d9a23e;
   transform: rotate(-45deg);
   z-index: 0;
   opacity: 0.6; 
@@ -170,7 +170,7 @@ body {
 
 .mission-label {
   display: inline-block;
-  background-color: #D9A23E; 
+  background-color: #d9a23e; 
   color: #111; 
   padding: 8px 16px;
   font-size: 0.85rem;
