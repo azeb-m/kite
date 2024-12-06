@@ -1,0 +1,114 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Chat Button */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #d9a23e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-btn:hover {
+    transform: scale(1.1);
+}
+
+.chat-btn .chat-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Chat Popup */
+.chat-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-popup.active {
+    display: flex;
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #d9a23e;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chat-header .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chat Content */
+.chat-content {
+    padding: 10px 15px;
+    overflow-y: auto;
+    max-height: 150px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Message Input */
+#message-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+/* Send Button */
+.send-btn {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+    background-color: #d9a23e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #e0b050;
+}

@@ -1,7 +1,8 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/css/services.css" />
  <script src="/js/service.js"></script>
-<section class="our-technology" style="background-image: url('/images/service-background.jpg')">
+ <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
+<section class="our-technology">
         <div class="grid-pattern"></div>
         <div class="content">
             <h1>Our Services</h1>
@@ -175,7 +176,9 @@
         <p>Implementing solutions like chatbots, automated emails, and CRM tools to ensure seamless and personalized customer interactions.</p>
     </div>
 </section>
-
+<section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 
 
 <%- include('partials/footer') %>

@@ -18,6 +18,7 @@ main {
     justify-content: space-between;
     padding: 50px;
     height: 80%;
+    background-image: url('/images/service-background.jpg')
 }
 
 .grid-pattern {
@@ -128,4 +129,37 @@ main {
 .black-icons svg {
     fill: black; 
     stroke: black; 
+}
+@media (max-width: 1081px) {
+  .our-technology {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-image: none;
+    padding-top: 250px;
+  }
+.content h1::after {
+ 
+  display: none;
+  
+}
+}
+@media (max-width: 768px) {
+  .our-technology {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-image: none;
+  }
+
+  
+
+  .cards-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%; /* Each card takes full width */
+  }
 }
