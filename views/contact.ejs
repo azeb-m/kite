@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
 </head>
 <%- include('partials/header') %>
 <body>
@@ -12,17 +13,21 @@
         <h1>Contact Us</h1>
         <form action="/contact" method="POST">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" class="contact" placeholder="Enter your name" required >
             
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="email" id="email" class="contact" name="email" placeholder="Enter your email" required>
             
             <label for="message">Your message</label>
-            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+            <textarea id="message" name="message" class="contact" placeholder="Enter your message" rows="5" required></textarea>
             
             <button type="submit">Submit</button>
         </form>
     </div>
+    <section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 </body>
+
 <%- include('partials/footer') %>
 </html>

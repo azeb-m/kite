@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add New Job</title>
   <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
 </head>
 <body>
   <div class="admin-page">
@@ -40,5 +41,8 @@
       </form>
     </div>
   </div>
+  <section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 </body>
 </html>

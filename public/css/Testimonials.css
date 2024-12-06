@@ -100,3 +100,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+   .testimonial-section {
+    padding-top: 270px;
+  }}

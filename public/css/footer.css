@@ -1,7 +1,7 @@
 /* General Footer Styling */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
   padding: 40px 20px;
   font-size: 14px;
   margin-top: auto;
@@ -18,14 +18,16 @@ footer {
   margin: 0 auto;
 }
 
-/* Columns */
+/* Footer Columns */
 .first-col,
 .second-col,
-.third-col {
-  flex-basis: 30%;
+.third-col,
+.fourth-col {
+  flex-basis: 23%; /* Adjusted for four columns */
   margin-top: 20px;
 }
 
+/* First Column: About Section */
 .footer-about {
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@ footer {
 
 .social-icons a {
   margin-right: 15px;
-  font-size: 30px;
+  font-size: 18px;
   text-decoration: none;
 }
 
@@ -86,10 +88,19 @@ footer {
   color: #2d4373;
 }
 
-/* Footer Links Section */
+/* Second Column: Quick Links */
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .footer-links ul {
   list-style: none;
   padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
 }
 
 .footer-links a {
@@ -98,16 +109,25 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #e0b050;
+  color: #e0b050; /* Gold hover */
 }
 
-/* Job Offers Section */
+/* Third Column: Job Offers */
+.footer-job-offers h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-job-offers p {
+  margin-bottom: 10px;
+}
+
 .jobs {
   display: block;
-  width: 45%;
+  width: 60%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #d9a23e; /* Gold Button Color */
+  background-color: #d9a23e; /* Gold button */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -117,7 +137,29 @@ footer {
 }
 
 .jobs:hover {
-  background-color: #e0b050; /* Lighter Gold */
+  background-color: #e0b050; /* Lighter gold */
+}
+
+/* Fourth Column: Contact Info */
+.fourth-col h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* White title */
+}
+
+.fourth-col p {
+  margin: 5px 0;
+  color: #fff; /* Gold text */
+  font-size: 14px;
+}
+
+.fourth-col a {
+  color: #fff; /* Gold links */
+  text-decoration: none;
+}
+
+.fourth-col a:hover {
+  text-decoration: underline;
 }
 
 /* Footer Bottom */
@@ -139,7 +181,8 @@ footer {
 
   .first-col,
   .second-col,
-  .third-col {
+  .third-col,
+  .fourth-col {
     flex-basis: 100%;
     margin-bottom: 20px;
   }
@@ -153,6 +196,7 @@ footer {
   .footer-logo {
     margin-bottom: 10px;
   }
+  
 
   .social-icons a {
     margin-right: 10px;

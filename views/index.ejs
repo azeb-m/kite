@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
     <link rel="stylesheet" href="/css/portfolio.css"> <!-- Link to portfolio CSS -->
+    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
     <title><%= title %></title>
     <script src="/js/script.js"></script>
 </head>
@@ -129,6 +130,9 @@ Management Consultancy
     </div>
   </div>
 </section>
+<section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 <!-- Footer Include -->
 <%- include('partials/footer') %>
     
