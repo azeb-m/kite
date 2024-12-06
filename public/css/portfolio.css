@@ -1,128 +1,80 @@
 /* Portfolio Section Styles */
 .portfolio {
-  padding: 30px 15px; /* Reduced padding for a compact layout */
+  padding: 60px 20px;
   text-align: center;
-  margin: 0 auto; /* Center the entire portfolio section */
-  max-width: 1200px; /* Ensure a reasonable maximum width */
+  margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background */
 }
 
 .portfolio h1 {
-  font-size: 2rem; /* Adjusted font size */
+  font-size: 2rem;
   color: #333;
-  margin-bottom: 30px; /* Spacing below the heading */
+  margin-bottom: 40px;
 }
-
+.portfolio h1::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #d9a23e; /* Golden yellow underline */
+  display: block;
+  margin: 10px auto 0;
+}
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 60px 20px; /* 60px between columns, 20px between rows */
-  justify-content: center; /* Center the collection */
-  max-width: 900px; /* Limit width of the grid */
-  margin: 0 auto; /* Center the grid horizontally */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for even distribution */
+  gap: 20px;
+  justify-items: center; /* Center all items horizontally */
 }
-
 
 .portfolio-item {
-  position: relative; /* Required for the overlay */
-  background-color: #fff;
-  overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  max-width: 240px; /* Reduced width */
-  margin: 0 auto;
-  height: 200px; /* Reduced height */
-  border-radius: 0; /* Sharp corners */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for sliding effect and opacity */
-  opacity: 0.9; /* Slightly more transparent item */
-}
-
-/* Light gray overlay */
-.portfolio-item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(247, 247, 247, 0.2); /* Increased transparency (0.2) */
-  z-index: 1; /* Ensure overlay appears above the image */
-}
-
-/* Portfolio Image */
-.portfolio-image {
-  width: 100%;
-  height: 200px; /* Slightly larger height for the image */
-  object-fit: cover;
-  z-index: 0; /* Ensure image stays below the overlay */
-  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
-  opacity: 1; /* Keep the image fully visible */
-}
-
-.portfolio-info {
+  background-color: #ffffff;
+  border: 1px solid #333; /* Golden yellow border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between;
   position: relative;
-  z-index: 2;
-  padding: 10px;
-  text-align: center; /* Center the text horizontally */
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center content vertically */
-  height: 100%; /* Ensure the container takes full height */
-  opacity: 1; /* Make the portfolio info more transparent */
+  border-radius: 12px;
+  padding: 30px 20px 20px; 
+  
+  
 }
 
-/* Make text bold and larger */
-.portfolio-info h3 {
-  font-size: 1.2rem; /* Larger text */
-  font-weight: bold; /* Bold text */
-  color: #000; /* Set text color to black */
-  margin-bottom: 6px;
-}
-
-.portfolio-info p {
-  font-size: 1rem; /* Larger paragraph text */
-  font-weight: bold; /* Bold paragraph text */
-  color: #000; /* Set paragraph text color to black */
-  line-height: 1.4;
-  visibility: hidden;
-  opacity: 0; /* Make paragraph text initially transparent */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
-
-/* Slide effect on hover */
 .portfolio-item:hover {
-  transform: scale(1.08); /* Slightly increase size of the portfolio item */
-  opacity: 1; /* Make the portfolio item fully visible on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
 }
 
-.portfolio-item:hover .portfolio-image {
-  transform: translateX(30px); /* Slide the image to the right by 10px */
-  opacity: 0.8;
+.portfolio-header {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
 }
 
-.portfolio-item:hover .portfolio-info {
-  opacity: 1; /* Make portfolio info fully visible on hover */
-}
-
-.portfolio-item:hover .portfolio-info p {
-  visibility: visible; /* Make paragraph text visible */
-  opacity: 1; /* Fade in paragraph text on hover */
-}
-
-/* Portfolio Item Initial State */
-.portfolio-item {
-  opacity: 0; /* Initially invisible */
-  transform: translateY(100px); /* Start farther below for a more dramatic effect */
-  transition: opacity 1s ease, transform 1s ease; /* Slower, smoother animation */
-}
-
-/* Portfolio Item Visible State */
-.portfolio-item.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Moves to its original position */
+.portfolio-header i {
+  font-size: 2.5rem; 
+  color: #d9a23e; 
 }
 
 
-/* Position the Last Item in the 2nd Column of the 3rd Row */
-.portfolio-item:last-child {
-  grid-column: 2; /* Position in the 2nd column */
-  grid-row: 3; /* Position in the 3rd row */
+.portfolio-header h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0; 
+}
+
+
+.portfolio-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.portfolio-item:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
 }

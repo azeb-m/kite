@@ -36,10 +36,17 @@ main {
 
 .content h1 {
     font-size: 3rem;
-    color: #d9a23e; 
+    color: #333; 
     margin-bottom: 20px;
 }
-
+.content h1::after {
+  content: "";
+  width: 250px;
+  height: 3px;
+  background-color: #d9a23e; /* Golden yellow underline */
+  display: block;
+  margin: 5px;
+}
 .content p {
     font-size: 1.2rem;
     color: #666;
