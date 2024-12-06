@@ -1,66 +1,106 @@
+/* General Header Styling */
 header {
-  background-color: #f7f7f7; /* Lighter background color for the header */
-  padding: 5px 10px; /* Reduced padding for a thinner and more compact header */
-  color: #111; /* Darker text color for better contrast */
+  background-color: #f7f7f7; /* Lighter background color */
+  padding: 5px 10px;
+  color: #111;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 15px); /* Reduced width to decrease space on sides even further */
-  margin: 0 7px; /* Further reduced margin to reduce space on sides */
+  width: calc(100% - 15px); 
+  margin: 0 7px; 
   z-index: 10;
-  border-radius: 8px; /* Slightly rounded corners */
-  border: 1px solid f7f7f7; /* Light and subtle border */
+  border-radius: 8px;
+  border: 1px solid #f7f7f7; /* Subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Container */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px; /* Reduced max-width for a smaller container */
+  max-width: 1000px;
   margin: 0 auto;
-  background-color: transparent;
 }
 
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  margin-left: 10px; /* Reduced margin for closer spacing */
+  margin-left: 10px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #111; /* Darker color for the links */
-  font-size: 0.8rem; /* Smaller font size for links */
-  font-weight: bold; /* Bold text for links */
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #333; /* Darker color for hover effect */
+  color: #333;
 }
 
-/* Logo styling */
+/* Active Link Styling */
+.nav-links a.active {
+  color: #d9a23e; /* Highlight color */
+  font-weight: bold;
+}
+
+/* Logo Styling */
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo-img {
-  height: 20px; /* Smaller height for the logo */
-  width: auto;  /* Maintain aspect ratio */
-  margin-right: 8px; /* Space between logo and text */
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
 }
 
 .logo-text {
-  font-size: 1rem; /* Smaller font size for the logo text */
-  color: #111; /* Darker text color for the logo */
-  font-weight: bold; /* Bold text for logo */
+  font-size: 1rem;
+  color: #111;
+  font-weight: bold;
 }
-.nav-links a.active {
-  color: #d9a23e; /* Highlight color for the active link */
-  font-weight: bold; /* Bold font for emphasis */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Stack logo and navigation links vertically */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+    width: 100%; /* Full width for the nav menu */
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 5px 0; /* Add vertical spacing between links */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Smaller logo and text for very small screens */
+  .logo-img {
+    height: 15px;
+  }
+
+  .logo-text {
+    font-size: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem; /* Reduce link font size */
+  }
 }

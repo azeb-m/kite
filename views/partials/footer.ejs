@@ -1,17 +1,28 @@
 <link rel="stylesheet" href="/css/style.css" />
 <!-- Link to your CSS -->
 <link rel="stylesheet" href="/css/footer.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <!-- Link to your CSS -->
 <footer>
     <div class="footer-container">
-        <div class="footer-logo">
-            <img src="/images/logo.jpeg"  alt="Mentor Logo" />
+        <div class="first-col">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="/images/logo.jpeg" alt="Mentor Logo" />
+                </div>
+                <div class="about-content">
+                    <h3>About Mentor</h3>
+                    <p>Mentor is dedicated to innovating the way we live by providing cutting-edge tech solutions.</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:example@example.com" class="email"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
         </div>
-        <div class="footer-about">
-            <h3>About Mentor</h3>
-            <p>Mentor is dedicated to innovating the way we live by providing cutting-edge tech solutions.</p>
-        </div>
-        <div class="footer-links">
+
+        <div class="second-col footer-links">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -21,7 +32,8 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
-        <div class="footer-job-offers">
+
+        <div class="third-col footer-job-offers">
             <h3>Job Offers</h3>
             <p>Subscribe to see Available Jobs</p>
             <form action="/jobs-list" method="GET">
@@ -30,7 +42,8 @@
             </form>
         </div>
     </div>
-    <div class="footer-bottom">
-        &copy; <%= new Date().getFullYear() %> Mentor. All rights reserved.
-    </div>
 </footer>
+<div class="footer-bottom">
+    &copy; <%= new Date().getFullYear() %> Mentor. All rights reserved.
+</div>
+
