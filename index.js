@@ -32,7 +32,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 
 app.get("/", (req, res) => {
-
   app.get("/about", (req, res) => {
     res.render("about.ejs");
   });
@@ -40,23 +39,16 @@ app.get("/", (req, res) => {
     res.render("services.ejs");
   });
 
-  
-
-
   app.get("/Testimonials", (req, res) => {
     res.render("Testimonials.ejs");
   });
-  ;
-
+  app.get("/about", (req, res) => {
+    res.render("about.ejs");
+  });
+  app.get("/services", (req, res) => {
+    res.render("services.ejs");
+  });
   
-
-
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
-});
-app.get("/services", (req, res) => {
-  res.render("services.ejs");
-});
 app.get("/admin", (req, res) => {
 
     res.render("admin.ejs");
@@ -94,7 +86,7 @@ app.get("/admin", (req, res) => {
   const { title, description, position, requirements } = req.body;
 
   try {
-    // Insert the job details into the jobs table
+     Insert the job details into the jobs table
     const result = await db.query(
       `INSERT INTO jobs (title, description, position, requirements)
        VALUES ($1, $2, $3, $4) RETURNING *`,
@@ -103,7 +95,7 @@ app.get("/admin", (req, res) => {
 
     const job = result.rows[0]; // Get the inserted job data
 
-    res.status(201).send("Job added successfully!");
+    res.status(cd 201).send("Job added successfully!");
   } catch (err) {
     console.error("Error inserting job:", err.message);
     res.status(500).send("Error adding job to the database.");
@@ -143,20 +135,15 @@ app.post('/apply/:jobId', async (req, res) => {
   }
 });
 
+  //app.get('/about', (req, res) => {
+  // res.render('about', { title: 'About Us' });
+  //});
 
-
-//app.get('/about', (req, res) => {
-// res.render('about', { title: 'About Us' });
-//});
-
-//app.get('/contact', (req, res) => {
-//   res.render('contact', { title: 'Contact Us' });
-//});
-
-
+  //app.get('/contact', (req, res) => {
+  //   res.render('contact', { title: 'Contact Us' });
+  //});
 
   res.render("index", { title: "Mentor" });
-
 });
 
 app.get("/our_products", (req, res) => {
