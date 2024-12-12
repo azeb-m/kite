@@ -38,8 +38,8 @@ body {
 
 .welcome-text h1 {
   font-size: 3rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 500;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
@@ -53,7 +53,7 @@ body {
 
 
 .btn-get-started:hover {
-  background-color: #1E5C5D; 
+  background-color: #e0b050; /* Slightly lighter golden shade on hover */
 }
 
 
@@ -182,9 +182,9 @@ body {
 
 /* Mission Text Styling */
 .mission-text {
-  font-size: 1.8rem; /* Larger text size for visibility */
-  font-weight: 400;
-  line-height: 1.6; /* Better spacing between lines */
+  font-size: 1.2rem; /* Larger text size for visibility */
+  font-weight: 100;
+  line-height: 1.2; /* Better spacing between lines */
 }
 
 /* Our Strong Customers Section */
@@ -259,6 +259,326 @@ body {
     padding: 30px 10px;
   }
 
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+/* Clients Section Styling */
+.clients-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.clients-section h2 {
+  font-size: 2.5rem;
+  color: #333; /* Black color */
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.clients-section h2::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #d9a23e; /* Yellowish underline */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.client-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo img {
+  max-width: 120px; /* Adjust the size of the logos */
+  max-height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.client-logo img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+.vision-mission-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Background gradient */
+  color: #333; /* Dark text */
+}
+
+.vision-mission-card {
+  position: relative;
+  border: 2px solid #333; /* Golden yellow border */
+  border-radius: 12px;
+  padding: 40px 20px 20px; /* Extra padding for the top icon */
+  width: 30%;
+  text-align: center;
+  background-color: #ffffff; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
+}
+
+.vision-mission-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333; /* Golden yellow heading */
+}
+.vision-mission-card h3 {
+  position: relative; /* Add position relative to allow positioning of the ::before element */
+ font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333; /* Golden yellow heading */
+}
+
+.vision-mission-card h3::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #d9a23e; /* Golden yellow underline */
+  bottom: -10px; /* Adjusted to position below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vision-mission-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; /* Dark text */
+}
+
+/* Top Border Icons - Even Smaller Circle */
+.border-icon {
+  position: absolute;
+  top: -12px; /* Slightly adjusted to reduce space from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem; /* Further reduced icon size */
+  color: #333; /* Golden yellow icon */
+  background-color: #ffffff; /* White background for contrast */
+  padding: 6px; /* Further reduced padding for a smaller circle */
+  border-radius: 50%; /* Circular shape */
+  border: 2px solid #333; /* Golden yellow border */
+}
+
+
+.services-solutions-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background */
+  color: #333; /* Dark text */
+}
+
+.services-solutions-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  color: #333; /* Golden yellow heading */
+}
+
+.services-solutions-section h2::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #d9a23e; /* Golden yellow underline */
+  display: block;
+  margin: 10px auto 0;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background: #ffffff; /* White card background */
+  border: 1px solid #333; /* Golden yellow border */
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
+}
+
+.service-card .icon {
+  font-size: 2.5rem; /* Adjusted font size for the icons */
+  color: #333; /* Golden yellow icon */
+  margin-bottom: 10px;
+}
+
+.service-card .service-category {
+  font-weight: bold;
+  position: relative; /* Add position relative to allow positioning of the ::before element */
+ font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333; /* Golden yellow heading */
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333; /* Dark text */
+}
+
+.service-card .read-more {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: #ffffff; /* White text */
+  background-color: #d9a23e; /* Golden yellow button */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.service-card .read-more:hover {
+  background-color: #b78a2e; /* Darker golden yellow */
+}
+.service-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
+}
+
+
+.vision-mission-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  color: #333;
+}
+
+.vision-mission-card {
+  position: relative;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  width: 30%; /* Default: three cards per row */
+  text-align: center;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
+}
+
+.vision-mission-card h3::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #d9a23e;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .vision-mission-section {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;   /* Center the stacked cards */
+    gap: 30px;             /* Increase space between cards */
+  }
+
+  .vision-mission-card {
+    width: 90%; /* Cards occupy most of the screen width */
+    margin: 0 auto; /* Center the cards */
+  }
+   .service-card {
+    width: 80%; /* Set the width to a smaller percentage for smaller screens */
+    margin: 0 auto; /* Center the single card */
+  }
+   .welcome-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .welcome-text, .welcome-image {
+    max-width: 100%; /* Ensure the elements take up full width */
+    margin: 0;
+  }
+
+  .welcome-image {
+    margin-top: 20px; /* Add some space between the sections */
+  }
+
+  .hero-section {
+    padding: 230px 10px;
+    text-align: center; /* Center text in hero section for smaller screens */
+  }
+
+  .welcome-image img {
+    max-width: 90%; /* Ensure image is responsive */
+    height: auto;
+  }
+
+  /* Move the welcome image below the hero section */
+  .welcome-section {
+    display: block; /* Stack everything */
+  }
+
+  /* For the hero section's title and subtitle */
   .main-title {
     font-size: 2rem;
   }

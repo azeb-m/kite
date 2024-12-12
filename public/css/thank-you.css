@@ -21,7 +21,7 @@
 
 .container h1 {
     font-size: 28px;
-    color: #000;
+    color: #333;
     margin-bottom: 15px;
 }
 
@@ -52,7 +52,7 @@
 /* Responsive Design for Thank You */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
+       padding-top: 250px;
     }
 
     .container h1 {

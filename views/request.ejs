@@ -10,13 +10,12 @@
 
 <body>
     <%- include('partials/header') %> <!-- Include header -->
-
+<link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
     <!-- Request Service Section -->
     <section class="request-service-section">
         <div class="form-container">
             <h2 class="form-title">Request a Service</h2>
             <p class="form-description">
-                Let us know how we can assist you. Select a service and provide the necessary details to get started!
             </p>
             <form action="/request-service" method="POST">
                 <!-- Full Name -->
@@ -44,7 +43,6 @@
 
                 <!-- Link to Service Details -->
                 <p class="service-details">
-                    Want to learn more about our services? 
                     <a href="/services" class="view-details">View Service Details</a>
                 </p>
 
@@ -61,5 +59,8 @@
     </section>
 
     <%- include('partials/footer') %> <!-- Include footer -->
+    <section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 </body>
 </html>

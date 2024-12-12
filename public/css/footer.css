@@ -1,13 +1,14 @@
+/* General Footer Styling */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
   padding: 40px 20px;
   font-size: 14px;
   margin-top: auto;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
+/* Footer Container */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -15,66 +16,119 @@ footer {
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
+}
+
+/* Footer Columns */
+.first-col,
+.second-col,
+.third-col,
+.fourth-col {
+  flex-basis: 23%; /* Adjusted for four columns */
+  margin-top: 20px;
+}
+
+/* First Column: About Section */
+.footer-about {
+  display: flex;
+  align-items: center;
 }
 
 .footer-logo {
-  flex-shrink: 0;  /* Prevent logo from shrinking */
-  margin-right: 20px;  /* Add spacing between logo and other content */
+  margin-right: 15px;
 }
 
 .footer-logo img {
   width: auto;
-  height: 50px; /* Adjust height to ensure it's not too large */
-  max-width: 120px; /* Maintain a maximum size */
+  height: 50px;
+  max-width: 120px;
 }
 
-.footer-about,
-.footer-links,
-.footer-job-offers {
-  margin-top: 20px; /* Ensure there's space between footer sections */
+.about-content h3 {
+  margin: 0;
+  font-size: 18px;
 }
 
-.footer-about {
-  flex-basis: 30%;
+.about-content p {
+  margin-top: 5px;
+  font-size: 14px;
 }
 
-.footer-links {
-  flex-basis: 30%;
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
 }
 
-.footer-job-offers {
-  flex-basis: 30%;
+.social-icons a {
+  margin-right: 15px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.footer-bottom {
-  background-color: #D9A23E; /* Golden yellow background */
-  color: #111; /* Darker text color for contrast */
-  text-align: center;
-  margin-top: 20px;
-  font-size: 12px;
-  padding: 10px 20px;
-  border-top: 1px solid #444;
-  flex-basis: 100%;
+.social-icons a.linkedin {
+  color: #0077b5;
 }
 
-footer .footer-links a {
+.social-icons a.linkedin:hover {
+  color: #005582;
+}
+
+.social-icons a.email {
+  color: #d44638;
+}
+
+.social-icons a.email:hover {
+  color: #b93b33;
+}
+
+.social-icons a.facebook {
+  color: #3b5998;
+}
+
+.social-icons a.facebook:hover {
+  color: #2d4373;
+}
+
+/* Second Column: Quick Links */
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
   color: #fff;
   text-decoration: none;
 }
 
-/* Optional: Add hover effect for the links */
-footer .footer-links a:hover {
-  color: #45a049; /* A slightly darker shade for hover effect */
+.footer-links a:hover {
+  color: #e0b050; /* Gold hover */
+}
+
+/* Third Column: Job Offers */
+.footer-job-offers h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-job-offers p {
+  margin-bottom: 10px;
 }
 
 .jobs {
   display: block;
-  width: 100%;
+  width: 60%;
   padding: 10px;
-  margin-top: 20px;
-  background-color: #d9a23e; /* Golden yellow color for the button */
-  color: #ffffff; /* White text for contrast */
+  margin-top: 10px;
+  background-color: #d9a23e; /* Gold button */
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -82,7 +136,97 @@ footer .footer-links a:hover {
   transition: background 0.3s ease;
 }
 
-/* Button hover effect */
 .jobs:hover {
-  background-color: #e0b050; /* Slightly lighter golden shade on hover */
+  background-color: #e0b050; /* Lighter gold */
+}
+
+/* Fourth Column: Contact Info */
+.fourth-col h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* White title */
+}
+
+.fourth-col p {
+  margin: 5px 0;
+  color: #fff; /* Gold text */
+  font-size: 14px;
+}
+
+.fourth-col a {
+  color: #fff; /* Gold links */
+  text-decoration: none;
+}
+
+.fourth-col a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #d9a23e; /* Gold */
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-top: 1px solid #444;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .first-col,
+  .second-col,
+  .third-col,
+  .fourth-col {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+  
+
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  .jobs {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-logo img {
+    height: 40px;
+  }
+
+  .about-content h3 {
+    font-size: 16px;
+  }
+
+  .about-content p {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  .jobs {
+    width: 100%;
+    padding: 8px;
+  }
 }

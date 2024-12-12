@@ -1,6 +1,7 @@
 <body>
   <link rel="stylesheet" href="/css/about.css" />
   <script src="/js/scripts.js"></script>
+  <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
   <%- include('partials/header') %>
   <main>
     <!-- About Us Section with Image -->
@@ -47,6 +48,9 @@
         <li>Commitment to impart knowledge, provide opportunity and mentorship, and command respect.</li>
         <li>Creating an atmosphere where all staff are respected and valued.</li>
       </ul>
+    </section>
+    <section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
     </section>
   </main>
   <%- include('partials/footer') %>

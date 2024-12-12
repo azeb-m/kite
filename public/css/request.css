@@ -29,9 +29,10 @@ body {
 
 /* Form Title and Description */
 .form-title {
-    font-size: 24px;
-    color: #000;
+    font-size: 20px;
+    color: #333;
     margin-bottom: 10px;
+    
 }
 
 .form-description {
@@ -48,7 +49,7 @@ body {
 
 label {
     display: block;
-    font-weight: bold;
+    font-weight: 1.2px;
     margin-bottom: 5px;
 }
 
@@ -77,7 +78,7 @@ select {
     background: url('/images/arrow-down.svg') no-repeat right 10px center, #fff;
     background-size: 12px 12px;
     padding-right: 35px;
-    font-weight: bold;
+    font-weight: 1.2px;
     cursor: pointer;
 }
 
@@ -92,16 +93,16 @@ select:focus {
 }
 
 .service-details .view-details {
-    color: #000;
+    color: #d9a23e;
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #d9a23e;
     transition: color 0.3s, border-color 0.3s;
 }
 
 .service-details .view-details:hover {
-    color: #444;
-    border-color: #444;
+    color: #b78a2e;
+    border-color: #b78a2e;
 }
 
 /* Fancy Submit Button */
@@ -125,7 +126,7 @@ select:focus {
 /* Responsive Design */
 @media (max-width: 768px) {
     .form-container {
-        padding: 20px;
+       padding-top: 250px;
     }
 
     h2 {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/thank-you.css"> <!-- Link to the Thank You page CSS -->
+    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
 
     <title><%= title %></title>
 </head>
@@ -20,5 +21,8 @@
     </section>
 
     <%- include('partials/footer') %> <!-- Optional footer -->
+    <section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
 </body>
 </html>

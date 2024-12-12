@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
     <link rel="stylesheet" href="/css/portfolio.css"> <!-- Link to portfolio CSS -->
+    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
     <title><%= title %></title>
     <script src="/js/script.js"></script>
 </head>
@@ -37,22 +40,101 @@
 
     <section class="mission-section">
         <div class="mission-content">
-          <span class="mission-label">OUR MISSION</span>
+          <span class="mission-label">About Us</span>
           <h2 class="mission-text">
-            Our mission is to empower innovation by transforming knowledge into
-             actionable solutions, enabling businesses to thrive in a rapidly evolving world. We leverage cutting-edge 
-             technology and deep expertise to deliver insights that drive growth, improve decision-making, and foster lasting success for our clients.
-          </h2>
+            Mentor Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.</h2>
         </div>
       </section>
       
 
-    <!-- Portfolio Section -->
+   
+
+
+<section class="vision-mission-section">
+  <div class="vision-mission-card">
+    <h3>Our Vision</h3>
+    <p>Unlocking technology potential to help organizations innovate, deliver superior customer experience, and perform better.</p>
+    <div class="border-icon icon-1">
+      <i class="fa-regular fa-eye"></i><!-- Vision Icon -->
+    </div>
+  </div>
+
+  <div class="vision-mission-card">
+    <h3>Our Mission</h3>
+    <p>Deliver innovative IT solutions, business services, talent development, and entrepreneurship support, driving growth, efficiency, and value.</p>
+    <div class="border-icon icon-2">
+    <i class="fa-solid fa-bullseye"></i> <!-- Mission Icon -->
+    </div>
+  </div>
+
+  <div class="vision-mission-card">
+    <h3>Our Values</h3>
+    <p>Committed to excellence, innovation, accountability, and building a collaborative, respectful environment that empowers clients and team members.</p>
+    <div class="border-icon icon-3">
+     <i class="fa-solid fa-diamond"></i><!-- Icon for the additional card -->
+    </div>
+  </div>
+</section>
+
+
+<section class="services-solutions-section">
+  <h2>Our Services</h2>
+  <div class="service-cards">
+    <div class="service-card">
+      <i class="fa-solid fa-list-check icon"></i>
+      <p class="service-category">
+Management Consultancy
+</p>
+      <p>Mentor also involves in management consulting in the areas of service innovation and enterprise transformation through IT enablement and customer-centric capabilities.</p>
+      <a href="/services" class="read-more">Read More</a>
+    </div>
+    <div class="service-card">
+      
+      <i class="fa-regular fa-handshake icon"></i>
+      <p class="service-category">Workshops, Seminars and Trainings</p>
+      <p>Mentor offers trainings, seminars and workshops on topics selected with the intention to provide key competencies that will enable practitioners and managers enhance their capabilities.</p>
+      <a href="/services" class="read-more">Read More</a>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-laptop icon"></i>
+      <p class="service-category">Automation service</p>
+      <p>Mentor provides automation services aimed at optimizing business and technology processes by utilizing advanced tools and techniques.</p>
+      </p>
+      <a href="/services" class="read-more">Read More</a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Portfolio Section -->
     <section id="portfolio-section" class="portfolio-section">
         <%- include('portfolio') %> <!-- Include the portfolio -->
     </section>
-
-
+    <section class="clients-section">
+  <h2>Satisfied Clients</h2>
+  <div class="clients-logos">
+    <div class="client-logo">
+      <img src="/images/bits.jpg" alt="Client 1" />
+    </div>
+    <div class="client-logo">
+      <img src="/images/frilogistics.png" alt="Client 2" />
+    </div>
+    <div class="client-logo">
+      <img src="/images/serianu.png" alt="Client 3" />
+    </div>
+    <div class="client-logo">
+      <img src="/images/disaster.png" alt="Client 4" />
+    </div>
+    <div class="client-logo">
+      <img src="/images/construction.png" alt="Client 5" />
+    </div>
+  </div>
+</section>
+<section id="popup" class="popup">
+        <%- include('chat-popup') %> <!-- Include the portfolio -->
+    </section>
+<!-- Footer Include -->
+<%- include('partials/footer') %>
     
 </body>
 

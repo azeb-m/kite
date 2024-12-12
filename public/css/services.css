@@ -18,6 +18,7 @@ main {
     justify-content: space-between;
     padding: 50px;
     height: 80%;
+    background-image: url('/images/service-background.jpg')
 }
 
 .grid-pattern {
@@ -36,10 +37,17 @@ main {
 
 .content h1 {
     font-size: 3rem;
-    color: #d9a23e; 
+    color: #333; 
     margin-bottom: 20px;
 }
-
+.content h1::after {
+  content: "";
+  width: 250px;
+  height: 3px;
+  background-color: #d9a23e; /* Golden yellow underline */
+  display: block;
+  margin: 5px;
+}
 .content p {
     font-size: 1.2rem;
     color: #666;
@@ -121,4 +129,37 @@ main {
 .black-icons svg {
     fill: black; 
     stroke: black; 
+}
+@media (max-width: 1081px) {
+  .our-technology {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-image: none;
+    padding-top: 250px;
+  }
+.content h1::after {
+ 
+  display: none;
+  
+}
+}
+@media (max-width: 768px) {
+  .our-technology {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-image: none;
+  }
+
+  
+
+  .cards-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%; /* Each card takes full width */
+  }
 }
