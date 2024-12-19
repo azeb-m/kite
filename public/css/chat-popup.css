@@ -9,14 +9,14 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
-    color: #d9a23e;
+    background-color: #ffffff; /* White background */
+    color: #d9a23e; /* Gold-like color for the text */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 15px;
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     cursor: pointer;
     z-index: 1000;
     transition: transform 0.3s ease;
@@ -38,9 +38,9 @@ body {
     bottom: 80px;
     right: 20px;
     width: 300px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Moderate shadow */
     display: none;
     flex-direction: column;
     z-index: 1000;
@@ -52,10 +52,10 @@ body {
 
 /* Chat Header */
 .chat-header {
-    background-color: #d9a23e;
-    color: #fff;
+    background-color:  #2D8F83; /* Gold-like background for header */
+    color: #ffffff; /* White text */
     padding: 10px 15px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +66,7 @@ body {
 .chat-header .close-btn {
     background: none;
     border: none;
-    color: #fff;
+    color: #ffffff; /* White for close button */
     font-size: 20px;
     cursor: pointer;
 }
@@ -77,12 +77,13 @@ body {
     overflow-y: auto;
     max-height: 150px;
     border-bottom: 1px solid #ddd;
+    background-color: #fafafa; /* Light grey for chat background */
 }
 
 .chat-message {
     margin-bottom: 10px;
     font-size: 14px;
-    color: #333;
+    color: #333; /* Dark text color for contrast */
 }
 
 /* Message Input */
@@ -93,6 +94,8 @@ body {
     border-radius: 4px;
     margin: 10px;
     font-size: 14px;
+    background-color: #ffffff; /* White input background */
+    color: #333; /* Dark text */
 }
 
 /* Send Button */
@@ -100,8 +103,8 @@ body {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 0 10px 10px 10px;
-    background-color: #d9a23e;
-    color: #fff;
+    background-color:  #2D8F83; /* Gold-like background */
+    color: #ffffff; /* White text */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -110,5 +113,5 @@ body {
 }
 
 .send-btn:hover {
-    background-color: #e0b050;
+    background-color: #e0b050; /* Slightly lighter gold shade on hover */
 }

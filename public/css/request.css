@@ -107,19 +107,20 @@ select:focus {
 
 /* Fancy Submit Button */
 .btn-submit {
-   padding: 10px 20px;
-  background-color: #d9a23e ; /* Bright blue button */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-    background-color: #e0b050; /* Darker blue for hover effect */
-}
+    padding: 10px 20px;
+    background-color: #2E8F83; /* Update to the desired greenish-blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ }
+ 
+ .btn-submit:hover {
+    background-color: #267067; /* Slightly darker shade for hover effect */
+ }
+ 
 
 
 

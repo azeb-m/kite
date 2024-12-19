@@ -1,6 +1,6 @@
 /* General Header Styling */
 header {
-  background-color: #EAE3EA ; /* Softer dark background matching footer */
+  background-color: #EAE3EA; /* Softer dark background matching footer */
   padding: 10px 20px;
   color: #D3D3D3; /* Softer gray text */
   text-align: center;
@@ -11,7 +11,6 @@ header {
   margin: 0 20px;
   z-index: 10;
   border-radius: 8px;
- 
 }
 
 /* Header Container */
@@ -33,13 +32,13 @@ header {
 }
 
 .logo-img {
-  height: 40px;
-  width: auto;
+  height:100px; /* Increased height for a larger logo */
+  width: auto; /* Maintain aspect ratio */
   margin-right: 10px;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #2E8F83;
   font-weight: bold;
 }
@@ -73,8 +72,7 @@ header {
 
 /* Active Link Styling */
 .nav-links a.active {
-  color: #CDA34F
-; /* Highlight color */
+  color: #CDA34F; /* Highlight color */
   font-weight: bold;
 }
 
@@ -124,11 +122,11 @@ header {
 
 @media screen and (max-width: 480px) {
   .logo-img {
-    height: 30px;
+    height: 600px; /* Adjusted for smaller screens */
   }
 
   .logo-text {
-    font-size: 1rem;
+    font-size: 1.2xrem;
   }
 
   .nav-links a {
