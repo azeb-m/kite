@@ -2,7 +2,7 @@
 
 body {
   background-color: #EAE3EA;
-  margin: 0; 
+  margin: 40px;
   font-family: Arial, sans-serif; 
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 .mission-section {
-  background-color: #002C2B; 
+  background-color:#2D8F83; 
   color: #EAE3EA;
   padding: 60px 20px; 
   position: relative;
@@ -170,7 +170,7 @@ body {
 
 .mission-label {
   display: inline-block;
-  background-color: #d9a23e; 
+  background-color: #F3E67A; 
   color: #111; 
   padding: 8px 16px;
   font-size: 0.85rem;
@@ -178,6 +178,7 @@ body {
   text-transform: uppercase; 
   border-radius: 4px;
   margin-bottom: 20px; 
+  border-radius: 5px;
 }
 
 /* Mission Text Styling */
