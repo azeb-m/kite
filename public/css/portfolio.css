@@ -4,7 +4,7 @@
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
-  background: linear-gradient(135deg, #ffffff, #f8f9fa); 
+  background: linear-gradient(135deg, #EAE3EA, #EAE3EA);
 }
 
 .portfolio h1 {
@@ -30,7 +30,7 @@
 }
 
 .portfolio-item {
-  background-color: #ffffff;
+  background-color: #EAE3EA;
   border: 1px solid #d9a23e; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   text-align: center;
