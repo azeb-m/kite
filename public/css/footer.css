@@ -1,7 +1,7 @@
 /* General Footer Styling */
 footer {
-  background-color: #333; /* Dark background */
-  color: #fff; /* Light text */
+  background-color: #2B2B2B; /* Softer dark background */
+  color: #D3D3D3; /* Softer gray text */
   padding: 40px 20px;
   font-size: 14px;
   margin-top: auto;
@@ -23,7 +23,7 @@ footer {
 .second-col,
 .third-col,
 .fourth-col {
-  flex-basis: 23%; /* Adjusted for four columns */
+  flex-basis: 23%;
   margin-top: 20px;
 }
 
@@ -46,11 +46,13 @@ footer {
 .about-content h3 {
   margin: 0;
   font-size: 18px;
+  color: #8DA89B;
 }
 
 .about-content p {
   margin-top: 5px;
   font-size: 14px;
+  color: #B0B0B0;
 }
 
 /* Social Icons */
@@ -65,33 +67,34 @@ footer {
 }
 
 .social-icons a.linkedin {
-  color: #0077b5;
+  color: #2E8F83;
 }
 
 .social-icons a.linkedin:hover {
-  color: #005582;
+  color: #8DA89B;
 }
 
 .social-icons a.email {
-  color: #d44638;
+  color: #8DA89B;
 }
 
 .social-icons a.email:hover {
-  color: #b93b33;
+  color: #2E8F83;
 }
 
 .social-icons a.facebook {
-  color: #3b5998;
+  color: #2E8F83;
 }
 
 .social-icons a.facebook:hover {
-  color: #2d4373;
+  color: #8DA89B;
 }
 
 /* Second Column: Quick Links */
 .footer-links h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #8DA89B;
 }
 
 .footer-links ul {
@@ -104,22 +107,24 @@ footer {
 }
 
 .footer-links a {
-  color: #fff;
+  color: #2E8F83;
   text-decoration: none;
 }
 
 .footer-links a:hover {
-  color: #e0b050; /* Gold hover */
+  color: #8DA89B;
 }
 
 /* Third Column: Job Offers */
 .footer-job-offers h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #8DA89B;
 }
 
 .footer-job-offers p {
   margin-bottom: 10px;
+  color: #B0B0B0;
 }
 
 .jobs {
@@ -127,8 +132,8 @@ footer {
   width: 60%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #d9a23e; /* Gold button */
-  color: #fff;
+  background-color: #8DA89B;
+  color: #2B2B2B;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -137,35 +142,37 @@ footer {
 }
 
 .jobs:hover {
-  background-color: #e0b050; /* Lighter gold */
+  background-color: #B0B0B0;
+  color: #2B2B2B;
 }
 
 /* Fourth Column: Contact Info */
 .fourth-col h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #fff; /* White title */
+  color: #8DA89B;
 }
 
 .fourth-col p {
   margin: 5px 0;
-  color: #fff; /* Gold text */
+  color: #B0B0B0;
   font-size: 14px;
 }
 
 .fourth-col a {
-  color: #fff; /* Gold links */
+  color: #2E8F83;
   text-decoration: none;
 }
 
 .fourth-col a:hover {
   text-decoration: underline;
+  color: #8DA89B;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  background-color: #d9a23e; /* Gold */
-  color: #fff;
+  background-color: #2B2B2B;
+  color: #B0B0B0;
   text-align: center;
   padding: 10px 20px;
   border-top: 1px solid #444;
@@ -196,7 +203,6 @@ footer {
   .footer-logo {
     margin-bottom: 10px;
   }
-  
 
   .social-icons a {
     margin-right: 10px;

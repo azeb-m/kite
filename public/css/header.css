@@ -1,30 +1,29 @@
 /* General Header Styling */
 header {
-  background-color: #f7f7f7; /* Lighter background color */
+  background-color: #EAE3EA ; /* Softer dark background matching footer */
   padding: 10px 20px;
-  color: #111;
+  color: #D3D3D3; /* Softer gray text */
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 40px); /* Adjust width for padding */
+  width: calc(100% - 40px);
   margin: 0 20px;
   z-index: 10;
   border-radius: 8px;
-  border: 1px solid #f7f7f7; /* Subtle border */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ 
 }
 
 /* Header Container */
 .header-container {
   display: flex;
-  justify-content: space-between; /* Spread out the logo and hamburger */
+  justify-content: space-between;
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 0 20px; /* Add padding for better spacing */
-  width: 100%; /* Ensure full width */
+  padding: 0 20px;
+  width: 100%;
 }
 
 /* Logo Styling */
@@ -34,14 +33,14 @@ header {
 }
 
 .logo-img {
-  height: 40px; /* Larger logo size */
+  height: 40px;
   width: auto;
   margin-right: 10px;
 }
 
 .logo-text {
-  font-size: 1.5rem; /* Slightly larger text size */
-  color: #111;
+  font-size: 1.5rem;
+  color: #2E8F83;
   font-weight: bold;
 }
 
@@ -51,9 +50,9 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px; /* Add space between links */
+  gap: 15px;
   align-items: center;
-  margin-left: auto; /* Align nav links to the right */
+  margin-left: auto;
 }
 
 .nav-links li {
@@ -62,25 +61,26 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #2E8F83; /* Matching footer link color */
   font-size: 0.8rem;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #333;
+  color: #8DA89B; /* Softer color on hover */
 }
 
 /* Active Link Styling */
 .nav-links a.active {
-  color: #d9a23e; /* Highlight color */
+  color: #CDA34F
+; /* Highlight color */
   font-weight: bold;
 }
 
 /* Hamburger Icon Styling */
 .hamburger {
-  display: none; /* Hide by default */
+  display: none;
   font-size: 2rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -88,13 +88,12 @@ header {
 
 /* Hamburger Fancy Effect */
 .hamburger:hover {
-  transform: rotate(90deg); /* Rotate on hover */
-  color: #d9a23e;
+  transform: rotate(90deg);
+  color: #8DA89B; /* Color to match the footer hover color */
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-  /* Stack logo and navigation links vertically */
   .header-container {
     flex-direction: row;
     justify-content: space-between;
@@ -102,38 +101,37 @@ header {
   }
 
   .nav-links {
-    display: none; /* Hide navigation links by default */
-    flex-direction: column; /* Stack navigation links vertically */
-    align-items: flex-start; /* Align links to the left */
-    width: 100%; /* Full width for the nav menu */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     margin-top: 10px;
-    gap: 10px; /* Space between links */
+    gap: 10px;
     position: absolute;
-    top: 100%; /* Position links directly below the header */
-    left: 0; /* Align to the left */
+    top: 100%;
+    left: 0;
   }
 
   .nav-links.active {
-    display: flex; /* Show navigation links when active */
+    display: flex;
   }
 
   .hamburger {
-    display: block; /* Show hamburger icon on smaller screens */
-    z-index: 20; /* Ensure it's above other elements */
+    display: block;
+    z-index: 20;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* Smaller logo and text for very small screens */
   .logo-img {
-    height: 30px; /* Adjust logo size */
+    height: 30px;
   }
 
   .logo-text {
-    font-size: 1rem; /* Adjust text size */
+    font-size: 1rem;
   }
 
   .nav-links a {
-    font-size: 0.7rem; /* Reduce link font size */
+    font-size: 0.7rem;
   }
 }
