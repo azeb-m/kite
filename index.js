@@ -16,7 +16,7 @@ import path from "path";
   db.connect()
 */
 const app = express();
-const port = 3001;
+const port = 3000;
 
 // Set up the view engine
 app.set("view engine", "ejs");
