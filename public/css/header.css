@@ -49,7 +49,7 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px;
+  gap: 35px;
   align-items: center;
   margin-left: auto;
 }
@@ -67,13 +67,13 @@ header {
 }
 
 .nav-links a:hover {
-  color: #8DA89B; /* Softer color on hover */
+  color: #d9a23e; /* Highlight color */
+  font-weight: bold;
 }
 
 /* Active Link Styling */
-.nav-links a.active {
-  color: #CDA34F; /* Highlight color */
-  font-weight: bold;
+.nav-links  a:is(:link , :active , :visited).active{
+  color: #d9a23e;
 }
 
 /* Hamburger Icon Styling */
@@ -119,6 +119,43 @@ header {
     z-index: 20;
   }
 }
+
+
+/* drop down */
+
+.nav-dropdown li {
+  display: inline-block;
+  position: relative;
+  
+}
+.nav-dropdown li ul.dropdown li  {
+  display: block;
+  padding: 4px 5px;
+  
+
+  
+}
+.nav-dropdown li ul.dropdown li {
+  display: block;
+}
+.nav-dropdown li:hover ul.dropdown {
+  display: block;
+}
+.nav-dropdown li ul.dropdown {
+  width: 100%;
+  background: whitesmoke;
+  position: absolute;
+  display: none;
+  text-align: left;
+}
+.nav-dropdown li ul.dropdown li a {
+  color: #2E8F83;
+}
+.nav-dropdown li ul.dropdown li a:hover {
+  color:goldenrod;
+  
+}
+
 
 @media screen and (max-width: 480px) {
   .logo-img {
