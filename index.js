@@ -143,7 +143,7 @@ app.post('/apply/:jobId', async (req, res) => {
   //   res.render('contact', { title: 'Contact Us' });
   //});
 
-  res.render("index", { title: "Mentor" });
+  res.render("index", { title: "Kite LLC" });
 });
 
 app.get("/our_products", (req, res) => {
