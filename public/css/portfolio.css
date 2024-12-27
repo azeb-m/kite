@@ -70,7 +70,7 @@
 }
 
 .button {
-  background-color: #d9a23e; /* Golden color */
+  background-color: aqua; /* Golden color */
   color: white; 
   border: none; 
   padding: 12px 16px; 
@@ -82,7 +82,7 @@
 }
 
 .button:hover {
-  background-color: #b58c2c; /* Darker shade for hover effect */
+  background-color: yellow; /* Darker shade for hover effect */
   transform: scale(1.05); 
 }
 
@@ -101,10 +101,10 @@
 .card:hover {
     transform: translateY(-10px); /* Lift effect */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-    border: 1px solid #d9a23e; /* Gold border on hover */
+    border: 1px solid aqua; /* Gold border on hover */
 }
 .read-more-2 {
-  background-color: #d9a23e; /* Golden background */
+  background-color: aqua; /* Golden background */
   color: white; /* White text color */
   padding: 10px 15px; /* Padding for better appearance */
   border-radius: 5px; /* Rounded corners */
@@ -113,7 +113,7 @@
 }
 
 .read-more-2:hover {
-  background-color: #b58c2c; /* Darker shade on hover */
+  background-color: yellow; /* Darker shade on hover */
   transform: scale(1.05); /* Slightly grow on hover */
 }
 

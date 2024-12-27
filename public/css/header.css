@@ -132,8 +132,6 @@ header {
   display: block;
   padding: 4px 5px;
   
-
-  
 }
 .nav-dropdown li ul.dropdown li {
   display: block;
@@ -142,7 +140,7 @@ header {
   display: block;
 }
 .nav-dropdown li ul.dropdown {
-  width: 100%;
+  width: 18vw;
   background: whitesmoke;
   position: absolute;
   display: none;
@@ -155,7 +153,6 @@ header {
   color:goldenrod;
   
 }
-
 
 @media screen and (max-width: 480px) {
   .logo-img {
