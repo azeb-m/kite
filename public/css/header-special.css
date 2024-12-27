@@ -60,7 +60,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #ffffff; /* Matching footer link color */
+  color: aquamarine; /* Matching footer link color */
   font-size: 0.8rem;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
@@ -126,6 +126,7 @@ header {
 .nav-dropdown li {
   display: inline-block;
   position: relative;
+  
   
 }
 .nav-dropdown li ul.dropdown li  {
