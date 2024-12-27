@@ -553,7 +553,13 @@ body {
   }
    .service-card {
     width: 80%; /* Set the width to a smaller percentage for smaller screens */
+    
     margin: 0 auto; /* Center the single card */
+    
+  }
+  .service-cards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
    .welcome-container {
     flex-direction: column; /* Stack elements vertically */
@@ -855,7 +861,8 @@ body {
   transition: opacity 1s ease-in; /* Fade-in effect */
 }
 .service-cards {
-  display: flex;
+  display: grid;
+  
  
 
   justify-content: space-between; /* Space between cards */

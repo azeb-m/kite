@@ -2,7 +2,7 @@
 header {
   
   padding: 10px 20px;
-  color: #ffffff; /* Softer gray text */
+  color: aqua; /* Softer gray text */
   text-align: center;
   position: fixed;
   top: 0;
@@ -44,118 +44,10 @@ header {
 }
 
 /* Navigation Links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 35px;
-  align-items: center;
-  margin-left: auto;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: aquamarine; /* Matching footer link color */
-  font-size: 0.8rem;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-  color: #d9a23e; /* Highlight color */
-  font-weight: bold;
-}
-
-/* Active Link Styling */
-.nav-links  a:is(:link , :active , :visited).active{
-  color: #d9a23e;
-}
-
-/* Hamburger Icon Styling */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hamburger Fancy Effect */
-.hamburger:hover {
-  transform: rotate(90deg);
-  color: #8DA89B; /* Color to match the footer hover color */
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    z-index: 20;
-  }
-}
 
 
 /* drop down */
 
-.nav-dropdown li {
-  display: inline-block;
-  position: relative;
-  
-  
-}
-.nav-dropdown li ul.dropdown li  {
-  display: block;
-  padding: 4px 5px;
-  
-
-  
-}
-.nav-dropdown li ul.dropdown li {
-  display: block;
-}
-.nav-dropdown li:hover ul.dropdown {
-  display: block;
-}
-.nav-dropdown li ul.dropdown {
-  width: 18vw;
-  background: whitesmoke;
-  position: absolute;
-  display: none;
-  text-align: left;
-}
-.nav-dropdown li ul.dropdown li a {
-  color: #2E8F83;
-}
-.nav-dropdown li ul.dropdown li a:hover {
-  color:goldenrod;
-  
-}
 
 
 @media screen and (max-width: 480px) {
@@ -167,7 +59,131 @@ header {
     font-size: 1.2xrem;
   }
 
-  .nav-links a {
-    font-size: 0.7rem;
+ 
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: aqua;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  
+  color: goldenrod;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: aqua;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: aqua;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  
+  color: goldenrod;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  
+  color: goldenrod;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  
+  color: goldenrod;
+}
+.dropdown-content{
+  background-color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
 }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+

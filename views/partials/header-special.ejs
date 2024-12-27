@@ -1,4 +1,4 @@
-<header>
+<header >
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/header-special.css" />
 
@@ -9,62 +9,48 @@
       <h1 class="logo-text">KITE LLC</h1>
     </div>
 
-    <!-- Hamburger Icon -->
-    <div class="hamburger" id="hamburger">
-      &#9776;
+
+
+    <div class="topnav" id="myTopnav">
+      <a href="/" class="active">Home</a>
+      <a href="/about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">our service
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/services#service1">Wholesale Services</a>
+          <a href="/services#service1">Specialized Machinery and Equipment</a>
+          <a href="/services#service1">IT and Digital Solutions</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Our praduct
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="our_products#product1">COMee</a>
+          <a href="our_products#product2">eCom</a>
+          <a href="our_products#product3">Data Outsourcing</a>
+          <a href="our_products#product4">SIS</a>
+        </div>
+      </div>
+     
+      <a href="/testimonials">Testimonials</a>
+      <a href="/contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <ul class="nav-dropdown">
-        <li>
-          <a href="/services">Our Services <i class="fas fa-angle-down"> </i></a>
-          <ul class="dropdown">
-            <li><a href="/services#service1">Wholesale Services</a></li>
-            <li><a href="/services#service2">Specialized Machinery and Equipment</a></li>
-            <li><a href="/services#service3"> IT and Digital Solutions</a></li>
-
-            
-          </ul>
-        </li>
-      </ul>
-
-       <ul class="nav-dropdown">
-        <li>
-          <a href="/our_products">Our products <i class="fas fa-angle-down"></i></a>
-          <ul class="dropdown">
-            <li><a href="our_products#product1">COMee</a></li>
-            <li><a href="our_products#product2">eCom</a></li>
-            <li><a href="our_products#product3">Data Outsourcing</a></li>
-            <li><a href="our_products#product4">SIS  </a></li>
-            
-          </ul>
-        </li>
-      </ul>
-      <li><a href="/testimonials">Testimonials</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div>
+           
 </header>
 
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentLocation = window.location.pathname === '/' ? '/' : window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentLocation) {
-        link.classList.add('active');
-      }
-    });
-
-    // Toggle navigation menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinksMenu = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinksMenu.classList.toggle('active');
-    });
-  });
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
