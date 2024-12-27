@@ -1,0 +1,172 @@
+/* General Header Styling */
+header {
+  
+  padding: 10px 20px;
+  color: #ffffff; /* Softer gray text */
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height:100px; /* Increased height for a larger logo */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  color: #2E8F83;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 35px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* Matching footer link color */
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #d9a23e; /* Highlight color */
+  font-weight: bold;
+}
+
+/* Active Link Styling */
+.nav-links  a:is(:link , :active , :visited).active{
+  color: #d9a23e;
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hamburger Fancy Effect */
+.hamburger:hover {
+  transform: rotate(90deg);
+  color: #8DA89B; /* Color to match the footer hover color */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 20;
+  }
+}
+
+
+/* drop down */
+
+.nav-dropdown li {
+  display: inline-block;
+  position: relative;
+  
+}
+.nav-dropdown li ul.dropdown li  {
+  display: block;
+  padding: 4px 5px;
+  
+
+  
+}
+.nav-dropdown li ul.dropdown li {
+  display: block;
+}
+.nav-dropdown li:hover ul.dropdown {
+  display: block;
+}
+.nav-dropdown li ul.dropdown {
+  width: 100%;
+  background: whitesmoke;
+  position: absolute;
+  display: none;
+  text-align: left;
+}
+.nav-dropdown li ul.dropdown li a {
+  color: #2E8F83;
+}
+.nav-dropdown li ul.dropdown li a:hover {
+  color:goldenrod;
+  
+}
+
+
+@media screen and (max-width: 480px) {
+  .logo-img {
+    height: 40px; 
+  }
+
+  .logo-text {
+    font-size: 1.2xrem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+}

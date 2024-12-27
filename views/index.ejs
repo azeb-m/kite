@@ -14,37 +14,74 @@
 </head>
 
 <body>
-    <%- include('partials/header') %> <!-- Include the header -->
+    <%- include('partials/header-special') %> <!-- Include the header -->
 
     <!-- Welcome Section -->
-    <section class="welcome-section">
-        <div class="welcome-container">
-            <!-- Text Section on the Left -->
-            <div class="welcome-text">
-                <!-- Hero Section (Direct Content) -->
-                <section class="hero-section">
-                    <h1 class="main-title">KITE: Empowering Innovation, Transforming Knowledge into Success</h1>
-                    <p class="subtitle">
-                        Harnessing cutting-edge technology to empower businesses for tomorrow.
-                    </p>
-                    <a href="/request-service" class="cta-button">Get Started</a>
-                </section>
-            </div>
 
-            <!-- Image Section on the Right -->
-            <div class="welcome-image">
-                <img src="/images/welcome-image.jpeg" alt="Welcome to Mentor" />
+
+
+<section class="welcome-section">
+    <div class="welcome-text">
+        <div class="carousel-item active">
+            <img src="/images/sale1_.png" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);">
+            <div class="carousel-container">
+                <h1 class="title">welcome to Kite LLC</h1>
+                <p class="description">Your One-Stop Wholesale Solution.</p>
             </div>
         </div>
-    </section>
 
-    <section class="mission-section">
-        <div class="mission-content">
-          <span class="mission-label">About Us</span>
-          <h2 class="mission-text">
-            KITE LLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.</h2>
+        <div class="carousel-item">
+            <img src="/images/sale2.jpeg" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);">
+            <div class="carousel-container">
+                <h1 class="title">welcome to Kite LLC</h1>
+                <p class="description">Your One-Stop Wholesale Solution.</p>
+            </div>
         </div>
-      </section>
+
+        <div class="carousel-item">
+            <img src="/images/sale3.jpeg" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); ">
+            <div class="carousel-container">
+                <h1 class="title">welcome to Kite LLC</h1>
+                <p class="description">Your One-Stop Wholesale Solution.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="/images/sale4..png" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);">
+            <div class="carousel-container">
+                <h1 class="title">welcome to Kite LLC</h1>
+                <p class="description">Your One-Stop Wholesale Solution.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="/images/sale2.jpeg" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);">
+            <div class="carousel-container">
+                <h1 class="title">welcome to Kite LLC</h1>
+                <p class="description">Your One-Stop Wholesale Solution.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="sec-1" class="section-scroll-down">
+      <a href="#sec-2">
+        <div class="scroll-down"></div>
+      </a>
+    </div>
+</section>
+
+
+<section class="mission-section" id="missionSection">
+  <div class="mission-image">
+      <img src="/images/about.png" alt="Mission Image">
+  </div>
+  <div class="mission-content">
+      <span class="mission-label"><a href="/about">About Us</a></span>
+      <h2 class="mission-text">
+        Kite LLC is a leading wholesale provider of a wide range of products and services, including computers, software, office equipment, and more. With our expertise and commitment to excellence, we strive to be your trusted partner in the industry.
+      </h2>
+  </div>
+</section>
+
       
 
    
@@ -76,39 +113,87 @@
   </div>
 </section>
 
-
-<section class="services-solutions-section">
-  <h2>Our Services</h2>
+<section class="services-solutions-section" id="services">
+  <h2>Our Services and products </h2>
   <div class="service-cards">
-    <div class="service-card">
-      <i class="fa-solid fa-list-check icon"></i>
-      <p class="service-category">
-Management Consultancy
-</p>
-      <p>KITE also involves in management consulting in the areas of service innovation and enterprise transformation through IT enablement and customer-centric capabilities.</p>
-      <a href="/services" class="read-more">Read More</a>
+      <div class="service-card">
+          <img src="/images/cat.jpg" alt="Management Consultancy" class="service-image">
+          <p class="service-category">System and Software Design</p>
+          <p>We create custom software and systems tailored to your needs</p>
+      </div>
+      <div class="service-card">
+          <img src="/images/construction.png" alt="Workshops" class="service-image">
+          <p class="service-category">Computer System Planning</p>
+          <p>Expert solutions to integrate hardware, software, and networks.</p>
+      </div>
+      <div class="service-card">
+          <img src="/images/cat.jpg" alt="Automation Service" class="service-image">
+          <p class="service-category">On-Site IT Management </p>
+          <p> Reliable support to manage and maintain your IT systems</p>
+      </div>
+      <div class="service-card">
+        <img src="/images/construction.png" alt="Management Consultancy" class="service-image">
+        <p class="service-category"> Computers and Computer Peripherals</p>
+        <p>High-quality desktops, laptops, and accessories.</p>
     </div>
     <div class="service-card">
-      
-      <i class="fa-regular fa-handshake icon"></i>
-      <p class="service-category">Workshops, Seminars and Trainings</p>
-      <p>KITE offers trainings, seminars and workshops on topics selected with the intention to provide key competencies that will enable practitioners and managers enhance their capabilities.</p>
-      <a href="/services" class="read-more">Read More</a>
+        <img src="/images/cat.jpg" alt="Workshops" class="service-image">
+        <p class="service-category">Software</p>
+        <p>A wide range of business and personal applications..</p>
     </div>
     <div class="service-card">
-      <i class="fa-solid fa-laptop icon"></i>
-      <p class="service-category">Automation service</p>
-      <p>KITE provides automation services aimed at optimizing business and technology processes by utilizing advanced tools and techniques.</p>
-      </p>
-      <a href="/services" class="read-more">Read More</a>
+        <img src="/images/construction.png" alt="Automation Service" class="service-image">
+        <p class="service-category">Office Machinery and Equipment </p>
+        <p> Printers, scanners, and more for smooth office operations.</p>
     </div>
+    <div class="service-card">
+      <img src="/images/cat.jpg" alt="Management Consultancy" class="service-image">
+      <p class="service-category">Office Furniture</p>
+      <p>Ergonomic and durable furniture for a productive workspace.</p>
+  </div>
+  <div class="service-card">
+      <img src="/images/construction.png" alt="Workshops" class="service-image">
+      <p class="service-category">On-Site IT Management </p>
+      <p> Advanced equipment for efficient logistics (excluding vehicles)</p>
+  </div>
+  <div class="service-card">
+      <img src="/images/cat.jpg" alt="Automation Service" class="service-image">
+      <p class="service-category">Production-line Robots</p>
+      <p> Automation tools to streamline industrial workflows.</p>
+  </div>
+  <div class="service-card">
+    <img src="/images/construction.png" alt="Automation Service" class="service-image">
+    <p class="service-category">Wires, Switches, and Installation Equipment </p>
+    <p> Reliable components for industrial setups.</p>
+</div>
+<div class="service-card">
+  <img src="/images/cat.jpg" alt="Management Consultancy" class="service-image">
+  <p class="service-category">Electrical Motors and Transformers </p>
+  <p>Durable solutions for electrical systems.</p>
+</div>
+<div class="service-card">
+  <img src="/images/cat.jpg" alt="Workshops" class="service-image">
+  <p class="service-category">Machine Tools  </p>
+  <p>High-performance tools for various manufacturing needs.</p>
+</div>
+<div class="service-card">
+  <img src="/images/construction.png" alt="Automation Service" class="service-image">
+  <p class="service-category">Computer-Controlled Machinery</p>
+  <p> Advanced machines for textiles, sewing, and knitting.</p>
+</div>
+<div class="service-card">
+  <img src="/images/cat.jpg" alt="Automation Service" class="service-image">
+  <p class="service-category">Measuring Instruments</p>
+  <p> Precision tools for accurate measurements</p>
+</div>
+  
+
   </div>
 </section>
 
-
  <!-- Portfolio Section -->
     <section id="portfolio-section" class="portfolio-section">
-        <%- include('portfolio') %> <!-- Include the portfolio -->
+        
     </section>
     <section class="clients-section">
   <h2>Satisfied Clients</h2>
