@@ -855,12 +855,12 @@ body {
   transition: opacity 1s ease-in; /* Fade-in effect */
 }
 .service-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+ 
 
   justify-content: space-between; /* Space between cards */
   flex-wrap: nowrap; /* Prevent wrapping */
-  max-width: 1150px; /* Max width for the container */
+  max-width: 1000px; /* Max width for the container */
   margin: 0 auto; /* Center the container */
 }
 .service-card {

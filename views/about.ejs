@@ -2,56 +2,129 @@
   <link rel="stylesheet" href="/css/about.css" />
   <script src="/js/scripts.js"></script>
   <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
-  <%- include('partials/header') %>
+  <%- include('partials/header-special') %>
   <main>
     <!-- About Us Section with Image -->
-    <section id="about" class="section">
+    <section id="about" class="section1">
       <div class="content">
         <div class="text">
           <h1>About Us</h1>
-          <p>Kite Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.</p>
+          
         </div>
-        <div class="image">
-          <img src="/images/mission-image.png" alt="About Us" />
-        </div>
+        
       </div>
     </section>
 
     <!-- Vision Section -->
-    <section id="vision" class="section center-aligned">
-      <h2>Our Vision</h2>
-      <p>Unlocking technology potential to help organizations innovate, deliver superior customer experience, and perform better.</p>
-    </section>
+     
+  <section id="visions" class="section3 center-aligned">
+    <div class="images">
+        <img src="images/vision-removebg-preview.png" alt="Vision Image">
+    </div>
+    <div class="texts">
+        <h2 class="h2">Our Vision</h2>
+        <p>Unlocking technology potential to help organizations innovate, deliver superior customer experience, and perform better.</p>
+    </div>
+</section>
 
-    <!-- Mission Section -->
-    <section id="mission" class="section center-aligned">
-      <h2>Our Mission</h2>
-      <ul>
-        <li>Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
-        <li>Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
-        <li>Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
-        <li>Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
-        <li>Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
-        <li>Foster entrepreneurship and business incubation.</li>
-        <li>Deliver real value to shareholders through consistent growth and profitability.</li>
-      </ul>
-    </section>
+<section class="mission">
+  <section id="mission" class="section2 center-aligned">
+    <h2 id="missionTitle" class="missionTitle">Our Mission</h2>
+    <ul id="missionList">
+        <li class="list-mision" >Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
+        <li class="list-mision" >Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
+        <li class="list-mision" >Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
+        <li class="list-mision" >Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
+        <li class="list-mision" >Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
+        <li class="list-mision"  >Foster entrepreneurship and business incubation.</li>
+        <li class="list-mision" >Deliver real value to shareholders through consistent growth and profitability.</li>
+    </ul>
+</section>
+   </section>
+   
+   
 
-    <!-- Values Section -->
-    <section id="values" class="section center-aligned">
-      <h2>Our Values</h2>
-      <ul>
-        <li>Working hard to make a difference in the organizations we serve.</li>
-        <li>Striving to handle each client with accountability and responsiveness.</li>
-        <li>Commitment to consistent delivery of quality and value through innovation.</li>
-        <li>Nurturing open communication, continuous learning, collaboration, and teamwork.</li>
-        <li>Commitment to impart knowledge, provide opportunity and mentorship, and command respect.</li>
-        <li>Creating an atmosphere where all staff are respected and valued.</li>
+<section class="value">
+<section id="vision" class="section4 center-aligned">
+  <div class="textss">
+      <h2 class="h22">Our Values</h2>
+      <ul class="li">
+          <li>Working hard to make a difference in the organizations we serve.</li>
+          <li>Striving to handle each client with accountability and responsiveness.</li>
+          <li>Commitment to consistent delivery of quality and value through innovation.</li>
+          <li>Nurturing open communication, continuous learning, collaboration, and teamwork.</li>
+          <li>Commitment to impart knowledge, provide opportunity and mentorship, and command respect.</li>
+          <li>Creating an atmosphere where all staff are respected and valued.</li>
       </ul>
-    </section>
-    <section id="popup" class="popup">
-        <%- include('chat-popup') %> <!-- Include the portfolio -->
-    </section>
+  </div>
+  <div class="imagess">
+      <img src="/images/new.png" alt="Vision Image">
+  </div>
+</section>
+</section>
+
+
+
+<script>
+  // Function to show elements with delay
+  const missionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const missionSection = document.getElementById('mission');
+          missionSection.style.visibility = 'visible'; // Make section visible
+          missionSection.style.opacity = '1'; // Fade in
+
+          // Animate title
+          const title = document.querySelector('#mission h2');
+          title.style.opacity = 1;
+          title.style.transform = 'translateY(0)';
+
+          // Animate each list item with a staggered delay
+          const listItems = document.querySelectorAll('#missionList li');
+          listItems.forEach((item, index) => {
+              setTimeout(() => {
+                  item.classList.add('visible'); // Trigger animation
+              }, (index + 1) * 1000); // Increase delay for each item
+          });
+
+          missionObserver.unobserve(entry.target); // Stop observing after it has appeared
+      }
+  });
+});
+
+// Observe the mission section
+missionObserver.observe(document.getElementById('mission'));
+</script>
+
+
+
+
+<script>
+  const visionObserver = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+       if (entry.isIntersecting) {
+           const visionSection = document.getElementById('vision');
+           visionSection.classList.add('visible'); // Add visible class to trigger animation
+ 
+           // Animate image from the top
+           const image = visionSection.querySelector('.imagess');
+           image.style.transform = 'translateY(0)'; // Move image to original position
+ 
+           // Animate values list after a delay
+           setTimeout(() => {
+               const valuesList = document.getElementById('valuesList');
+               valuesList.classList.add('visible'); // Trigger animation for values
+           }, 1000); // Delay for values list animation (1 second)
+ 
+           visionObserver.unobserve(entry.target); // Stop observing after it has appeared
+       }
+   });
+ });
+ 
+ // Observe the vision section
+ visionObserver.observe(document.getElementById('vision'));
+ </script>
+
   </main>
   <%- include('partials/footer') %>
 </body>

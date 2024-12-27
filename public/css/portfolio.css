@@ -1,10 +1,9 @@
-
 .portfolio {
   padding: 60px 20px;
   text-align: center;
   margin: 0 auto;
-  max-width: 1200px;
-  background: linear-gradient(135deg, #EAE3EA, #EAE3EA);
+  max-width: 100%;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); 
 }
 
 .portfolio h1 {
@@ -22,94 +21,108 @@
   margin: 10px auto 0;
 }
 
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;
-  justify-items: center;
-}
-
-.portfolio-item {
-  background-color: #EAE3EA;
-  border: 1px solid #d9a23e; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: space-between;
+.slider-container {
   position: relative;
-  border-radius: 12px;
-  padding: 30px 20px 20px;
+  width: 100%; 
+  max-width: 900px;
+  overflow: hidden; 
+  margin: 0 auto; /* Center the slider */
 }
 
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
-}
-
-.portfolio-header {
+.card-container {
   display: flex;
-  align-items: center; 
-  gap: 10px;
+  gap: 20px;
+  scroll-snap-type: x mandatory; 
+  transition: transform 0.3s ease; /* Smooth transition */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px; /* Add padding for better appearance */
+  scrollbar-width: none; /* For Firefox */
 }
 
-.portfolio-header i {
-  font-size: 2.5rem;
-  color: #d9a23e; 
+.card-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
-.portfolio-header h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin: 0; 
+.card {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space elements evenly */
+  align-items: center; /* Center align items */
+  flex: 0 0 405px; 
+  box-sizing: border-box;
+  padding: 50px; /* Adjust padding */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
 }
 
-.portfolio-item p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-}
-.sis i{
-  color: #333;
+.controls {
+  position: absolute;
+  top: 50%;
+  width: calc(103% - 40px); 
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px; 
 }
 
+.button {
+  background-color: #d9a23e; /* Golden color */
+  color: white; 
+  border: none; 
+  padding: 12px 16px; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  font-size: 20px; 
+  transition: background 0.3s, transform 0.2s; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
 
-@media (min-width: 1024px) {
-  .portfolio-container {
-    grid-template-columns: repeat(3, 1fr); 
+.button:hover {
+  background-color: #b58c2c; /* Darker shade for hover effect */
+  transform: scale(1.05); 
+}
+
+@media (max-width: 768px) {
+  .card {
+      flex: 0 0 200px; /* Adjust card width for smaller screens */
   }
-
- 
-  .portfolio-item:nth-child(6) { 
-    grid-column: span 3; 
-    grid-row: 2; 
-  }
 }
-
-
-@media (max-width: 768px) { 
-  .portfolio-container {
-    grid-template-columns: 1fr 1fr; 
-  }
-
-  .portfolio-item {
-    padding: 20px; 
-  }
-
-  .portfolio h1 {
-    font-size: 1.8rem; 
-  }
-}
-
 
 @media (max-width: 480px) {
-  .portfolio-container {
-    grid-template-columns: 1fr; 
-  }
-
-  .portfolio-item {
-    padding: 15px; 
+  .card {
+      flex: 0 0 150px; /* Further adjust card width */
   }
 }
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    border: 1px solid #d9a23e; /* Gold border on hover */
+}
+.read-more-2 {
+  background-color: #d9a23e; /* Golden background */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for better appearance */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.read-more-2:hover {
+  background-color: #b58c2c; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly grow on hover */
+}
+
+
+.card-content {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Space elements evenly */
+  width: 100%; /* Full width */
+}
+
+

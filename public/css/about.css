@@ -1,11 +1,11 @@
 /* General Layout */
 main {
-  margin-top: 100px;
+  margin-top: 0px;
   font-family: "Poppins", sans-serif;
 }
 
-.section {
-  padding: 80px 20px;
+.section1 {
+  padding: 20px 20px;
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 15px;
@@ -14,25 +14,32 @@ main {
   background: linear-gradient(135deg, #ffffff, #f8f9fa);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-image: url(/images/sale1_.png);
+  height: 500px;
+  margin-top: -100px;
 }
 
-.section:hover {
+
+.section1:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Headings */
-.section h1,
-.section h2 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
+.section1 h1,
+.section1 h2 {
+  font-size: 5rem;
+  color: whitesmoke;
+  margin-bottom: 10px;
   position: relative;
-  text-align: center;
+  padding-left: 150px;
+  padding-top: 300;
+  font-family: serif;
+  
 }
 
-.section h1::after,
-.section h2::after {
+.section1 h1::after,
+.section1 h2::after {
   content: '';
   display: block;
   width: 100px;
@@ -48,6 +55,7 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+  
 }
 
 .content .text {
@@ -114,4 +122,171 @@ html {
     text-align: center;
     padding-top: 100px;
   }
+}
+
+/* our vision */
+
+.section3 {
+  display: flex;
+  justify-content: space-between; /* Space between image and text */
+  align-items: center; /* Center vertically */
+  padding: 40px 20px;
+  
+  margin: 0 auto; /* Center the section */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Fade transition */
+}
+.images {
+  flex: 1; /* Take up available space */
+  text-align: center; /* Center image */
+  transform: translateY(-20px); /* Start above */
+  transition: transform 0.3s ease; /* Slide transition */
+  padding-left: 150px;
+}
+.texts {
+  flex: 1; /* Take up available space */
+  transform: translateX(-20px); /* Start from the left */
+  transition: transform 0.3s ease; /* Slide transition */
+  padding-right: 200px;
+  
+ 
+  
+ 
+}
+.section3.visible {
+  opacity: 1; /* Make visible */
+}
+.section3.visible .image {
+  transform: translateY(0); /* Move to original position */
+}
+.section3.visible .text {
+  transform: translateX(0); /* Move to original position */
+}
+.images img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 30px; /* Rounded corners */
+  
+}
+.h2 {
+  margin: 0 0 10px; /* Space below heading */
+  font-size: 2.5em; /* Larger font size for heading */
+  color: #f9d34d; /* Gold color for the heading */
+  
+}
+p {
+  margin: 0; /* Remove default margin */
+}
+
+/* our mision */
+
+
+.mission{
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Black background for the whole page */
+  color: #f9d34d; /* Gold color for the text */
+}
+.section2  {
+  max-width: 800px; /* Max width for the section */
+  margin: 40px auto; /* Center the section with margin */
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark gray background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2); /* Subtle gold shadow for depth */
+  text-align: center; /* Center text */
+}
+
+.missionTitle {
+  font-size: 2.5em; /* Larger font size for heading */
+  color: #f9d34d; /* Gold color for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start position */
+  transition: opacity 10s ease, transform 10s ease; /* Fade and slide transition */
+}
+
+ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Align text to the left */
+}
+
+.list-mision {
+  font-size: 1.2em; /* Slightly larger font size for list items */
+  color: #f9d34d; /* Gold color for text */
+  margin: 15px 0; /* Space between list items */
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start position */
+  transition: opacity 1 ease, transform 1 ease; /* Fade and slide transition */
+  padding-left: 40px; /* Space for bullet */
+  position: relative; /* Position for pseudo-element */
+}
+
+.list-mision.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+.list-mision::before {
+  content: '✔'; /* Custom bullet */
+  position: absolute; /* Positioning */
+  left: 10px; /* Align to the left */
+  color: #f9d34d; /* Gold color for bullet */
+  font-size: 1.5em; /* Size of bullet */
+}
+
+
+
+
+/* value */
+.value {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background for the whole page */
+}
+.section4 {
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Center vertically */
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  margin: 0 auto; /* Center the section */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Fade transition */
+}
+.imagess {
+  flex: 1; /* Take up available space */
+  text-align: center; /* Center image */
+  transform: translateY(-130px); /* Start above */
+  transition: transform 3s ease; /* Slide transition */
+}
+.textss {
+  flex: 1; /* Take up available space */
+  transform: translateX(-130px); /* Start from the left */
+  transition: transform 3s ease; /* Slide transition */
+  padding-left: 200px; /* Adjust padding to fit layout */
+}
+.section4.visible {
+  opacity: 1; /* Make visible */
+}
+.section4.visible .imagess {
+  transform: translateY(0); /* Move to original position */
+}
+.section4.visible .textss {
+  transform: translateX(0); /* Move to original position */
+}
+.imagess img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+}
+.h22 {
+  margin: 0 0 10px; /* Space below heading */
+  color: goldenrod;
+}
+.li {
+  margin: 0; /* Remove default margin */
 }
