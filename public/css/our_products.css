@@ -69,6 +69,7 @@ body {
   background-position: center;
   border-radius: 8px;
   margin: 0 20px;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
 /* Product Info */
@@ -133,17 +134,29 @@ body {
   transform: translateY(0);
 }
 
-
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-   .product-image {
-    display: none;
+  .product-image {
+    width: 100%; /* Make the image full width on mobile */
+    height: 200px; /* Adjust height as needed */
+    margin: 0;
+    border-radius: 8px;
+    transform: scale(1.05); /* Add a slight zoom effect */
   }
 
   .product-item {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Stack the image above the text */
+    text-align: center; /* Center the text */
+    padding: 50px 10px; /* Adjust padding for mobile */
+    box-shadow: none; /* Remove box shadow on mobile for a cleaner look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
   }
+
+  .product-item:hover {
+    transform: translateY(-10px); /* Add slight hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add hover shadow effect */
+  }
+
   .product-info {
     padding: 10px;
   }
@@ -155,7 +168,23 @@ body {
   .product-item p {
     font-size: 1rem;
   }
-  .section-header{
+
+  .section-header {
     padding-top: 250px;
+  }
+
+  /* Add Card Flip Animation */
+  .product-item.flip .product-image {
+    transform: rotateY(180deg); /* Flip image */
+  }
+
+  .product-item.flip .product-info {
+    transform: rotateY(0); /* Flip the text */
+  }
+
+  /* Smooth scrolling transition */
+  .products-container {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
   }
 }

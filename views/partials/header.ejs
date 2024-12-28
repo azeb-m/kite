@@ -9,24 +9,22 @@
       <h1 class="logo-text">KITE LLC</h1>
     </div>
 
-
-
+    <!-- Top Navigation -->
     <div class="topnav" id="myTopnav">
       <a href="/" class="active">Home</a>
       <a href="/about">About</a>
       <div class="dropdown">
-        <button class="dropbtn">our service
+        <button class="dropbtn">Our Services
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
           <a href="/services#service1">Wholesale Services</a>
-          <a href="/services#service1">Specialized Machinery and Equipment</a>
-          <a href="/services#service1">IT and Digital Solutions</a>
+          <a href="/services#service2">Specialized Machinery and Equipment</a>
+          <a href="/services#service3">IT and Digital Solutions</a>
         </div>
       </div>
-
       <div class="dropdown">
-        <button class="dropbtn">Our praduct
+        <button class="dropbtn">Our Products
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -36,21 +34,20 @@
           <a href="our_products#product4">SIS</a>
         </div>
       </div>
-     
       <a href="/testimonials">Testimonials</a>
       <a href="/contact">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-           
+  </div>
 </header>
 
 <script>
   function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
-}
 </script>
