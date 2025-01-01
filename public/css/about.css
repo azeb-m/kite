@@ -14,8 +14,8 @@ main {
   background: linear-gradient(135deg, #ffffff, #f8f9fa);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-image: url(/images/sale1_.png);
-  height: 500px;
+  background-image: url(/images/new.jpeg);
+  height: 600px;
   margin-top: -100px;
 }
 
@@ -120,7 +120,8 @@ html {
 
   .text {
     text-align: center;
-    padding-top: 100px;
+  
+    padding-top: 50px;
   }
 }
 
@@ -148,6 +149,9 @@ html {
   transform: translateX(-20px); /* Start from the left */
   transition: transform 0.3s ease; /* Slide transition */
   padding-right: 200px;
+  font-family: "open Sans", sans-serif;
+  align-items: center;
+
   
  
   
@@ -172,6 +176,8 @@ html {
   margin: 0 0 10px; /* Space below heading */
   font-size: 2.5em; /* Larger font size for heading */
   color: #f9d34d; /* Gold color for the heading */
+  width: 300px;
+  padding-left: 20px;
   
 }
 p {
@@ -239,7 +245,6 @@ ul {
 
 
 
-
 /* value */
 .value {
   font-family: Arial, sans-serif;
@@ -247,46 +252,73 @@ ul {
   padding: 0;
   background-color: #f4f4f4; /* Light background for the whole page */
 }
+
 .section4 {
   display: flex;
-  justify-content: space-between; /* Space between text and image */
-  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically on small screens */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   padding: 40px 20px;
   background-color: #f9f9f9; /* Light background for contrast */
   margin: 0 auto; /* Center the section */
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease; /* Fade transition */
 }
+
 .imagess {
   flex: 1; /* Take up available space */
   text-align: center; /* Center image */
   transform: translateY(-130px); /* Start above */
   transition: transform 3s ease; /* Slide transition */
 }
+
 .textss {
   flex: 1; /* Take up available space */
   transform: translateX(-130px); /* Start from the left */
   transition: transform 3s ease; /* Slide transition */
-  padding-left: 200px; /* Adjust padding to fit layout */
+  padding-left: 20px; /* Adjust padding to fit layout */
 }
+
 .section4.visible {
   opacity: 1; /* Make visible */
 }
+
 .section4.visible .imagess {
   transform: translateY(0); /* Move to original position */
 }
+
 .section4.visible .textss {
   transform: translateX(0); /* Move to original position */
 }
+
 .imagess img {
   max-width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Rounded corners */
 }
+
 .h22 {
   margin: 0 0 10px; /* Space below heading */
   color: goldenrod;
+  font-size: 35px;
 }
+
 .li {
   margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove bullet points */
+  text-align: left; /* Align text to the left */
 }
+
+@media (min-width: 600px) {
+  .section4 {
+      flex-direction: row; /* Row layout for larger screens */
+  }
+  .texts{
+    width:200px;
+  }
+  .textss {
+      padding-left: 200px; /* Adjust padding for larger screens */
+  }
+}
+

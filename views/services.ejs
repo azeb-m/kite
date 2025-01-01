@@ -1,184 +1,235 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 <link rel="stylesheet" href="/css/services.css" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
  <script src="/js/service.js"></script>
  <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
+
+</head>
+<body>
+    <%- include('partials/header') %>
 <section class="our-technology">
         <div class="grid-pattern"></div>
-        <div class="content">
+        <div class="content1">
             <h1>Our Services</h1>
             <p>
                 Kite specializes in consulting, training, and automation solutions to enhance innovation, transformation, and connectivity. Its services empower organizations with tailored strategies and technologies.
             </p>
         </div>
 </section>
-<section>
+
     <section class="sec-header" id="service1">
-    <h1>Wholesale Services</h1>
-    <p>
-        These services focus on bulk sales of essential IT hardware and office supplies, catering to businesses and organizations that require large quantities of products.
-    </p>
-</section>
-<section class="cards-container">
-    <div class="card">
-        <div class="icon black-icons">
-            <!-- Icon (Clock Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <line x1="32" y1="32" x2="32" y2="16" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-                <line x1="32" y1="32" x2="42" y2="32" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <p>  Wholesale of Computers and Computer Peripheral Equipment: Provision of computers, monitors, printers, and related accessories in large quantities to businesses and resellers.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Users Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <circle cx="24" cy="26" r="6" fill="#FFC107"/>
-                <circle cx="40" cy="26" r="6" fill="#FFC107"/>
-                <path d="M20 42c0-6 12-6 12-6s12 0 12 6v4H20z" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>Wholesale of Software: Bulk sales of licensed software applications and operating systems tailored to client needs.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Creativity Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <path d="M24 24h16v16H24z" fill="#FFC107"/>
-                <path d="M32 18v28M18 32h28" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <p>Wholesale of Office Machinery and Equipment: Supply of office essentials like photocopiers, scanners, and non-computer office equipment.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Growth Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <rect x="26" y="30" width="4" height="10" fill="#FFC107"/>
-                <rect x="34" y="26" width="4" height="14" fill="#FFC107"/>
-                <rect x="30" y="22" width="4" height="18" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>Wholesale of Office Furniture: Distribution of ergonomic desks, chairs, and other furniture for office spaces.</p>
-    </div>
-</section>
-<section>
-    <section class="sec-header" id="service2">
-    <h1> Specialized Machinery and Equipment</h1>
-    <p>
-        These services provide advanced tools and machinery to industrial and specialized sectors, emphasizing efficiency and innovation. 
-    </p>
-</section>
-<section class="cards-container">
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Clock Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <line x1="32" y1="32" x2="32" y2="16" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-                <line x1="32" y1="32" x2="42" y2="32" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <p>Wholesale of Production-Line Robots: Distribution of automated robots used in manufacturing and assembly lines.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Users Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <circle cx="24" cy="26" r="6" fill="#FFC107"/>
-                <circle cx="40" cy="26" r="6" fill="#FFC107"/>
-                <path d="M20 42c0-6 12-6 12-6s12 0 12 6v4H20z" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>   Wholesale of Wires, Switches, and Installation Equipment: Provision of electrical components for industrial setups and installations.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Creativity Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <path d="M24 24h16v16H24z" fill="#FFC107"/>
-                <path d="M32 18v28M18 32h28" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <p> Wholesale of Machine Tools: Supply of versatile tools designed for machining various materials in industrial workshops.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Growth Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <rect x="26" y="30" width="4" height="10" fill="#FFC107"/>
-                <rect x="34" y="26" width="4" height="14" fill="#FFC107"/>
-                <rect x="30" y="22" width="4" height="18" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>Wholesale of Computer-Controlled Machine Tools: Sale of CNC machines for precision and automation in manufacturing processes. </p>
-    </div>
-</section>
-<section>
-    <section class="sec-header" id="service3">
     <h1>IT and Digital Solutions</h1>
-    <p>
+
+    <p >
         These services focus on leveraging technology to develop, manage, and maintain IT systems and digital content for businesses.
     </p>
+</section></br>
+    
+
+
+
+
+
+    
+   
+   
+    
+
+<section class="value">
+    <section id="vision" class="section4 center-aligned">
+        <h2 class="title">Our Services</h2> <!-- Title at the top center -->
+        <div class="content">
+            <div class="imagess">
+                <img src="/images/software.png" alt="Vision Image">
+            </div>
+            <div class="textss">
+                <ul class="li" id="right">
+                    <h2 class="subtitle">Tailored Tech</h2>
+                    <li>Designing and Coding for Software, Databases, and Web Pages: Crafting tailored 
+                        software, robust databases, and engaging websites for diverse applications.</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
 </section>
-<section class="cards-container">
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Clock Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <line x1="32" y1="32" x2="32" y2="16" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-                <line x1="32" y1="32" x2="42" y2="32" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+
+    <section class="value">
+        <section id="visions" class="section4 center-aligned">
+            <h2 class="title"></h2> <!-- Title at the top center -->
+            <div class="content">
+           
+          <div class="textss">
+              
+              <ul class="li" id="left">
+                <h2 class="subtitle">Integrated Systems Design</h2>
+                  <li> Planning and Designing Integrated Computer Systems: Developing and 
+                    implementing solutions that integrate hardware, software, and communication technologies.</li>
+                  
+              </ul>
+          </div>
+          <div class="imagess">
+            <img src="/images/software2.png" alt="Vision Image">
         </div>
-        <p> Designing and Coding for Software, Databases, and Web Pages: Crafting tailored software, robust databases, and engaging websites for diverse applications.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Users Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <circle cx="24" cy="26" r="6" fill="#FFC107"/>
-                <circle cx="40" cy="26" r="6" fill="#FFC107"/>
-                <path d="M20 42c0-6 12-6 12-6s12 0 12 6v4H20z" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>Planning and Designing Integrated Computer Systems: Developing and implementing solutions that integrate hardware, software, and communication technologies.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Creativity Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <path d="M24 24h16v16H24z" fill="#FFC107"/>
-                <path d="M32 18v28M18 32h28" stroke="#FFC107" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <p>On-Site Management and Support Services: Providing technical support, system administration, and maintenance directly at the client's location.</p>
-    </div>
-    <div class="card">
-        <div class="icon">
-            <!-- Icon (Growth Icon Example) -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
-                <circle cx="32" cy="32" r="30" fill="#FFF9E6" stroke="#FFC107" stroke-width="4"/>
-                <rect x="26" y="30" width="4" height="10" fill="#FFC107"/>
-                <rect x="34" y="26" width="4" height="14" fill="#FFC107"/>
-                <rect x="30" y="22" width="4" height="18" fill="#FFC107"/>
-            </svg>
-        </div>
-        <p>Provision of Digital Content Services: Creation and management of digital content for businesses, including multimedia, online platforms, and data-driven solutions</p>
-    </div>
-</section>
+            </div>
+          
+        </section>
+        </section>
+
+
+
+
+        <section class="value">
+            <section id="visionss" class="section4 center-aligned">
+                <h2 class="title"></h2> <!-- Title at the top center -->
+                <div class="content">
+                    <div class="imagess">
+                        <img src="/images/suport.png" alt="Vision Image">
+                    </div>
+                    <div class="textss">
+                        <ul class="li" id="right">
+                            <h2 class="subtitle">On-Site Management</h2>
+                            <li> On-Site Management and Support Services: Providing technical support, 
+                            system administration, and maintenance directly at the client's location.</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="value">
+            <section id="visionsss" class="section4 center-aligned">
+                <h2 class="title"></h2> <!-- Title at the top center -->
+                <div class="content">
+                   
+                    <div class="textss">
+                        <ul class="li" id="left">
+                            <h2 class="subtitle">Digital Content Solutions</h2>
+                            <li>Provision of Digital Content Services: Creation and management of digital
+                                 content for businesses, including multimedia, online platforms, and data-driven solutions.</li>
+                          
+                        </ul>
+                    </div>
+                    <div class="imagess">
+                        <img src="/images/seport.png" alt="Vision Image">
+                    </div>
+                </div>
+            </section>
+        </section>
 <section id="popup" class="popup">
         <%- include('chat-popup') %> <!-- Include the portfolio -->
     </section>
+    <script>
+        const visionObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                 const visionSection = document.getElementById('vision');
+                 visionSection.classList.add('visible'); // Add visible class to trigger animation
+       
+                 // Animate image from the top
+                 const image = visionSection.querySelector('.imagess');
+                 image.style.transform = 'translateY(0)'; // Move image to original position
+       
+                 // Animate values list after a delay
+                 setTimeout(() => {
+                     const valuesList = document.getElementById('valuesList');
+                     valuesList.classList.add('visible'); // Trigger animation for values
+                 }, 1000); // Delay for values list animation (1 second)
+       
+                 visionObserver.unobserve(entry.target); // Stop observing after it has appeared
+             }
+         });
+       });
+       
+       // Observe the vision section
+       visionObserver.observe(document.getElementById('visions'));
+       </script>
 
+<script>
+    const visionObservers = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+         if (entry.isIntersecting) {
+             const visionSection = document.getElementById('visions');
+             visionSection.classList.add('visible'); // Add visible class to trigger animation
+   
+             // Animate image from the top
+             const image = visionSection.querySelector('.imagess');
+             image.style.transform = 'translateY(0)'; // Move image to original position
+   
+             // Animate values list after a delay
+             setTimeout(() => {
+                 const valuesList = document.getElementById('valuesList');
+                 valuesList.classList.add('visible'); // Trigger animation for values
+             }, 1000); // Delay for values list animation (1 second)
+   
+             visionObservers.unobserve(entry.target); // Stop observing after it has appeared
+         }
+     });
+   });
+   
+   // Observe the vision section
+   visionObservers.observe(document.getElementById('visionss'));
+   </script>
+
+<script>
+    const visionObserverss = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+         if (entry.isIntersecting) {
+             const visionSection = document.getElementById('visionss');
+             visionSection.classList.add('visible'); // Add visible class to trigger animation
+   
+             // Animate image from the top
+             const image = visionSection.querySelector('.imagess');
+             image.style.transform = 'translateY(0)'; // Move image to original position
+   
+             // Animate values list after a delay
+             setTimeout(() => {
+                 const valuesList = document.getElementById('valuesList');
+                 valuesList.classList.add('visible'); // Trigger animation for values
+             }, 1000); // Delay for values list animation (1 second)
+   
+             visionObserverss.unobserve(entry.target); // Stop observing after it has appeared
+         }
+     });
+   });
+   
+   // Observe the vision section
+   visionObserverss.observe(document.getElementById('vision'));
+   </script>
+
+
+<script>
+    const visionObserversss = new IntersectionObserver((entries) => {
+     entries.forEach(entry => {
+         if (entry.isIntersecting) {
+             const visionSection = document.getElementById('visionsss');
+             visionSection.classList.add('visible'); // Add visible class to trigger animation
+   
+             // Animate image from the top
+             const image = visionSection.querySelector('.imagess');
+             image.style.transform = 'translateY(0)'; // Move image to original position
+   
+             // Animate values list after a delay
+             setTimeout(() => {
+                 const valuesList = document.getElementById('valuesList');
+                 valuesList.classList.add('visible'); // Trigger animation for values
+             }, 1000); // Delay for values list animation (1 second)
+   
+             visionObserversss.unobserve(entry.target); // Stop observing after it has appeared
+         }
+     });
+   });
+   
+   // Observe the vision section
+   visionObserversss.observe(document.getElementById('vision'));
+   </script>
 
 <%- include('partials/footer') %>
+
+</body>
+</html>

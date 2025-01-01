@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Arial", sans-serif;
+font-family: "open Sans", sans-serif;
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
@@ -31,17 +31,18 @@ main {
 }
 
 
-.content {
+.content1 {
     flex: 1; 
     padding: 0 20px;
+    margin-top: 100px ;
 }
 
-.content h1 {
+.content1 h1 {
     font-size: 3rem;
     color: #333; 
     margin-bottom: 20px;
 }
-.content h1::after {
+.content1 h1::after {
   content: "";
   width: 250px;
   height: 3px;
@@ -49,9 +50,11 @@ main {
   display: block;
   margin: 5px;
 }
-.content p {
+.content1 p {
     font-size: 1.2rem;
+    font-family: "open Sans", sans-serif;
     color: #666;
+    align-items: left ;
     max-width: 500px; 
     line-height: 1.8;}
 
@@ -60,7 +63,7 @@ main {
 .sec-header {
     text-align: center;
     padding: 105px;
-    background-color: #f4f4f4;
+    background-color: none;
     border-bottom: 1px solid #ddd;
      opacity: 0; 
     transform: translateY(100px); 
@@ -78,6 +81,7 @@ main {
     margin: 10px 0 0;
     font-size: 1.1rem;
     color: #555;
+    
 }
 
 .cards-container {
@@ -90,17 +94,15 @@ main {
 }
 
 .card {
-    background: #fff;
-    border: 1px solid #ddd;
+    background:none;
+    
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
     padding: 20px;
     text-align: center;
      opacity: 0; 
-    transform: translateY(100px); 
-    transition: opacity 0.8s ease, transform 0.8s ease; 
-    will-change: opacity, transform;
+
 }
 
 .card .icon {
@@ -116,7 +118,9 @@ main {
     margin-bottom: 20px;
    
 }
-
+.subtitle{
+    color: aqua;
+}
 
 .card.show {
   opacity: 1; 
@@ -139,7 +143,7 @@ main {
     background-image: none;
     padding-top: 250px;
   }
-.content h1::after {
+.content1 h1::after {
  
   display: none;
   
@@ -163,4 +167,100 @@ main {
   .card {
     width: 100%; /* Each card takes full width */
   }
+}
+
+  /* value */
+  .value {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for the whole page */
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    margin: 0 auto; /* Center the section */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.1s ease; /* Fade transition */
+}
+
+.title {
+    margin-bottom: 20px; /* Space below heading */
+    color: goldenrod;
+    text-align: center; /* Center the heading */
+}
+
+.content {
+    display: flex;
+    flex-direction: row; /* Row layout for larger screens */
+    width: 100%; /* Full width */
+    align-items: center; /* Align items vertically */
+}
+
+.imagess {
+    flex: 1; /* Take up available space */
+    text-align: center; /* Center image */
+    transform: translateY(-130px); /* Start above */
+    transition: transform 3s ease; /* Slide transition */
+    margin-right: 20px; /* Add space to the right */
+}
+
+.textss {
+    flex: 1; /* Take up available space */
+    transform: translateX(130px); /* Start from the right */
+    transition: transform 3s ease; /* Slide transition */
+    
+}
+#right{
+    padding-right: 250px; /* Adjust padding to fit layout */
+}
+
+#left{
+    padding-left: 250px; /* Adjust padding to fit layout */
+    align-items: center;
+}
+
+
+.section4.visible {
+    opacity: 1; /* Make visible */
+}
+
+.section4.visible .imagess {
+    transform: translateY(0); /* Move to original position */
+}
+
+.section4.visible .textss {
+    transform: translateX(0); /* Move to original position */
+}
+
+.imagess img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.li {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullet points */
+    text-align: left; /* Align text to the left */
+}
+
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center; /* Center items */
+    }
+    .imagess {
+        margin-right: 0; /* Remove right margin on smaller screens */
+    }
+    .textss {
+        padding-left: 0; /* Remove left padding on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
 }

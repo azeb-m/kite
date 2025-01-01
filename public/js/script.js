@@ -11,46 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  
-// Function to handle the fade-in effect when the section comes into view
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          const servicesSection = document.getElementById('services');
-          servicesSection.style.visibility = 'visible'; // Make section visible
-          servicesSection.style.opacity = '1'; // Fade in
-
-          // Animate each card's contents
-          const cards = document.querySelectorAll('.service-card');
-          cards.forEach((card, index) => {
-              setTimeout(() => {
-                  card.style.opacity = '1'; // Fade in card
-                  card.style.transform = 'translateY(0)'; // Slide to original position
-              }, index * 300); // Staggering effect
-              const image = card.querySelector('.service-image');
-              const category = card.querySelector('.service-category');
-
-              // Animate image
-              setTimeout(() => {
-                  image.style.opacity = '1'; // Fade in image
-                  image.style.transform = 'translateX(0)'; // Slide to original position
-              }, index * 300);
-
-              // Animate category
-              setTimeout(() => {
-                  category.style.opacity = '1'; // Fade in category
-                  category.style.transform = 'translateX(0)'; // Slide to original position
-              }, index * 300);
-          });
-
-          observer.unobserve(entry.target); // Stop observing after it has appeared
-      }
-  });
-});
-
-// Observe the services section
-observer.observe(document.getElementById('services'));
-
+  const visionObserver = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+       if (entry.isIntersecting) {
+           const visionSection = document.getElementById('vision');
+           visionSection.classList.add('visible'); // Add visible class to trigger animation
+ 
+           // Animate image from the top
+           const image = visionSection.querySelector('.imagess');
+           image.style.transform = 'translateY(0)'; // Move image to original position
+ 
+           // Animate values list after a delay
+           setTimeout(() => {
+               const valuesList = document.getElementById('valuesList');
+               valuesList.classList.add('visible'); // Trigger animation for values
+           }, 1000); // Delay for values list animation (1 second)
+ 
+           visionObserver.unobserve(entry.target); // Stop observing after it has appeared
+       }
+   });
+ });
+ 
+ // Observe the vision section
+ visionObserver.observe(document.getElementById('vision'));
 
 
 

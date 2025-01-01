@@ -72,6 +72,7 @@ body {
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
+
 /* Product Info */
 .product-info {
   flex: 1;
@@ -92,6 +93,7 @@ body {
   margin-bottom: 15px;
 }
 
+
 .product-info h4 {
   font-size: 1rem;
   font-weight: bold;
@@ -104,6 +106,9 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.card{
+  width: 1000px;
 }
 
 .functionalities-list li {
@@ -145,32 +150,24 @@ body {
   }
 
   .product-item {
-    flex-direction: column; /* Stack the image above the text */
-    text-align: center; /* Center the text */
-    padding: 50px 10px; /* Adjust padding for mobile */
-    box-shadow: none; /* Remove box shadow on mobile for a cleaner look */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+
+   padding: 100px;
   }
 
-  .product-item:hover {
-    transform: translateY(-10px); /* Add slight hover effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add hover shadow effect */
-  }
-
-  .product-info {
-    padding: 10px;
-  }
 
   .product-item h3 {
     font-size: 1.5rem;
+    width: 200px;
   }
 
   .product-item p {
     font-size: 1rem;
   }
 
-  .section-header {
-    padding-top: 250px;
+  .section-header{
+    padding-top: 50px;
+
+  
   }
 
   /* Add Card Flip Animation */
