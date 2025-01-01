@@ -1,4 +1,4 @@
-/* General Layout */
+/* General Laut */
 main {
   margin-top: 0px;
   font-family: "Poppins", sans-serif;
@@ -120,8 +120,11 @@ html {
 
   .text {
     text-align: center;
-  
-    padding-top: 50px;
+   
+    
+  }
+  .images{
+    display: block;
   }
 }
 
@@ -129,10 +132,10 @@ html {
 
 .section3 {
   display: flex;
+  overflow: hidden;
   justify-content: space-between; /* Space between image and text */
   align-items: center; /* Center vertically */
   padding: 40px 20px;
-  
   margin: 0 auto; /* Center the section */
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease; /* Fade transition */
@@ -142,13 +145,15 @@ html {
   text-align: center; /* Center image */
   transform: translateY(-20px); /* Start above */
   transition: transform 0.3s ease; /* Slide transition */
-  padding-left: 150px;
+  padding-left: 200px;
+  
+  
 }
 .texts {
   flex: 1; /* Take up available space */
   transform: translateX(-20px); /* Start from the left */
   transition: transform 0.3s ease; /* Slide transition */
-  padding-right: 200px;
+ 
   font-family: "open Sans", sans-serif;
   align-items: center;
 
@@ -168,11 +173,11 @@ html {
 }
 .images img {
   max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
+  height: 600px; /* Maintain aspect ratio */
   border-radius: 30px; /* Rounded corners */
   
 }
-.h2 {
+.our-vision {
   margin: 0 0 10px; /* Space below heading */
   font-size: 2.5em; /* Larger font size for heading */
   color: #f9d34d; /* Gold color for the heading */
@@ -184,65 +189,6 @@ p {
   margin: 0; /* Remove default margin */
 }
 
-/* our mision */
-
-
-.mission{
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000000; /* Black background for the whole page */
-  color: #f9d34d; /* Gold color for the text */
-}
-.section2  {
-  max-width: 800px; /* Max width for the section */
-  margin: 40px auto; /* Center the section with margin */
-  padding: 20px;
-  background-color: #1a1a1a; /* Dark gray background for contrast */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2); /* Subtle gold shadow for depth */
-  text-align: center; /* Center text */
-}
-
-.missionTitle {
-  font-size: 2.5em; /* Larger font size for heading */
-  color: #f9d34d; /* Gold color for the heading */
-  margin-bottom: 20px; /* Space below the heading */
-  opacity: 0; /* Start hidden */
-  transform: translateY(-20px); /* Start position */
-  transition: opacity 10s ease, transform 10s ease; /* Fade and slide transition */
-}
-
-ul {
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
-  text-align: left; /* Align text to the left */
-}
-
-.list-mision {
-  font-size: 1.2em; /* Slightly larger font size for list items */
-  color: #f9d34d; /* Gold color for text */
-  margin: 15px 0; /* Space between list items */
-  opacity: 0; /* Start hidden */
-  transform: translateY(-20px); /* Start position */
-  transition: opacity 1 ease, transform 1 ease; /* Fade and slide transition */
-  padding-left: 40px; /* Space for bullet */
-  position: relative; /* Position for pseudo-element */
-}
-
-.list-mision.visible {
-  opacity: 1; /* Make visible */
-  transform: translateY(0); /* Move to original position */
-}
-
-.list-mision::before {
-  content: '✔'; /* Custom bullet */
-  position: absolute; /* Positioning */
-  left: 10px; /* Align to the left */
-  color: #f9d34d; /* Gold color for bullet */
-  font-size: 1.5em; /* Size of bullet */
-}
-
 
 
 /* value */
@@ -250,7 +196,7 @@ ul {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background for the whole page */
+  
 }
 
 .section4 {
@@ -259,12 +205,16 @@ ul {
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   padding: 40px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
+ 
   margin: 0 auto; /* Center the section */
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease; /* Fade transition */
 }
+.our_miss{
+  
 
+  
+}
 .imagess {
   flex: 1; /* Take up available space */
   text-align: center; /* Center image */
@@ -301,6 +251,8 @@ ul {
   margin: 0 0 10px; /* Space below heading */
   color: goldenrod;
   font-size: 35px;
+  text-align: center;
+  background-color: none;
 }
 
 .li {
@@ -316,9 +268,122 @@ ul {
   }
   .texts{
     width:200px;
+    
   }
+ 
+  
   .textss {
       padding-left: 200px; /* Adjust padding for larger screens */
+  }
+}
+@media (min-width: 480px) {
+
+  .section3{
+    
+    text-align: left;
+  }}
+/*for mision*/
+
+.slider-container {
+  display: flex; /* Flexbox layout for image and slider */
+  max-width: 800px; /* Increased max width for the container */
+  margin: auto;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+ 
+  border-radius: 8px; /* Added border-radius for aesthetics */
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Start position for animation */
+  animation: fadeIn 0.5s forwards; /* Animation */
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0); /* End position for animation */
+  }
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  padding: 5px 0;
+}
+.icon {
+  font-size: 80px; /* Increased icon size */
+  display: block;
+  margin-bottom: 10px; /* Space between icon and title */
+  animation: slideIn 0.5s forwards; /* Animation for icon */
+}
+
+.our_mission{
+  color: goldenrod;
+  text-align: center;
+}
+@keyframes slideIn {
+  from {
+      transform: translateY(-30px); /* Start position for icon */
+      opacity: 0; /* Initially hidden */
+  }
+  to {
+      transform: translateY(0); /* End position for icon */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+.mission{
+  margin-top: -150;
+}
+/* Image styles */
+.slider-image {
+  max-width: 250px; /* Set a max width for the image */
+  height: 600px; /* Keep the aspect ratio */
+  margin-right: 20px; /* Space between image and slider */
+}
+@media (max-width: 768px) {
+  .slide {
+      padding: 15px; /* Adjust padding for smaller screens */
+  }
+  .icon {
+      font-size: 60px; /* Smaller icons on medium screens */
+  }
+  .slider-image {
+      max-width: 120px; /* Smaller images on medium screens */
+  }
+}
+@media (max-width: 480px) {
+  .slide {
+      padding: 10px; /* Further adjust padding for mobile */
+  }
+  h2 {
+      font-size: 1.5em; /* Smaller headings on mobile */
+  }
+  .icon {
+      font-size: 40px; /* Smaller icons on mobile */
+  }
+  .slider-image {
+      display: none;
+  }
+
+  .newtext{
+    margin-left: -100px;
+    margin-top: -200px;
   }
 }
 
