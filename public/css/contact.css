@@ -1,5 +1,5 @@
-/* Body background */
-body {
+  /* Body background */
+  body {
     font-family: Arial, sans-serif;
     background-color: #ffffff; /* Plain white page background */
     margin: 0;
@@ -10,8 +10,8 @@ body {
 /* Contact card styling */
 .contact-container {
     max-width: 600px;
-    margin: 130px auto;
-    padding: 20px;
+    margin: 50px auto; /* Adjusted for better spacing on larger screens */
+    padding: 50px;
     background-color: #eeeeee; /* Light gray background for the card */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ label {
 }
 
 /* Input fields and textarea styling */
-.contact{
+.contact {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -50,7 +50,7 @@ input:focus, textarea:focus {
 }
 
 /* Button styling */
-button {
+.buttons {
     display: block;
     width: 100%;
     padding: 10px;
@@ -65,10 +65,38 @@ button {
 }
 
 /* Button hover effect */
-button:hover {
+.buttons:hover {
     background-color: #e0b050; /* Slightly lighter golden shade on hover */
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .contact-container {
+        margin: 40px auto; /* Adjust margin for tablets */
+        padding: 15px; /* Reduce padding */
+    }
+}
+
 @media (max-width: 768px) {
-   .contact-container {
-    padding-top: 250px;
-  }}
+    .contact-container {
+        margin: 150px auto; /* Further adjust margin */
+        padding: 10px; /* Further reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        margin: 150px auto; /* Adjust for mobile */
+        padding: 10px; /* Consistent padding for mobile */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust font size for the title */
+    }
+
+    .buttons {
+        padding: 8px; /* Adjust button padding */
+    }
+
+    
+}

@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
 setTimeout(function() {
   const visionSection = document.getElementById('visions');
   visionSection.classList.add('visible'); // Add visible class to trigger animation
-}, 2000); // Delay of 3000 milliseconds (3 seconds)
+}, 100); // Delay of 3000 milliseconds (3 seconds)
 
 
 });

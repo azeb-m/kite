@@ -71,6 +71,7 @@ body {
   margin: 0 20px;
 }
 
+
 /* Product Info */
 .product-info {
   flex: 1;
@@ -91,6 +92,7 @@ body {
   margin-bottom: 15px;
 }
 
+
 .product-info h4 {
   font-size: 1rem;
   font-weight: bold;
@@ -103,6 +105,9 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.card{
+  width: 1000px;
 }
 
 .functionalities-list li {
@@ -141,21 +146,24 @@ body {
   }
 
   .product-item {
-    flex-direction: column;
-    text-align: center;
+   padding: 100px;
+    
   }
   .product-info {
     padding: 10px;
+    
+    
   }
 
   .product-item h3 {
     font-size: 1.5rem;
+    width: 200px;
   }
 
   .product-item p {
     font-size: 1rem;
   }
   .section-header{
-    padding-top: 250px;
+    padding-top: 50px;
   }
 }

@@ -6,6 +6,7 @@ footer {
   font-size: 14px;
   margin-top: auto;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* Footer Container */
@@ -39,7 +40,7 @@ footer {
 
 .footer-logo img {
   width: auto;
-  height: 50px;
+  height: 100px;
   max-width: 120px;
 }
 
