@@ -21,36 +21,84 @@
     <div class="images">
         <img src="images/vision-removebg-preview.png" alt="Vision Image">
     </div>
-    <div class="texts">
-        <h2 class="h2">Our Vision</h2>
+    <div class="texts newtext">
+        <h2 class="our-vision">Our Vision</h2>
         <p>Unlocking technology potential to help organizations innovate, deliver superior customer experience, and perform better.</p>
     </div>
 </section>
 
-<section class="mission">
-  <section id="mission" class="section2 center-aligned">
-    <h2 id="missionTitle" class="missionTitle">Our Mission</h2>
-    <ul id="missionList">
-        <li class="list-mision" >Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
-        <li class="list-mision" >Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
-        <li class="list-mision" >Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
-        <li class="list-mision" >Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
-        <li class="list-mision" >Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
-        <li class="list-mision"  >Foster entrepreneurship and business incubation.</li>
-        <li class="list-mision" >Deliver real value to shareholders through consistent growth and profitability.</li>
-    </ul>
-</section>
-   </section>
-   
-   
 
+<section class="mission">
+  <h1 class="our_mission">Our mission</h1>
+
+  <div class="slider-container">
+    <img src="images/mision.png" alt="Slider Image" class="slider-image"> <!-- Image placed outside the slide -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <span class="icon">💼</span>
+                <h2>Empowerment Solutions</h2>
+                <ul>
+                    <li>Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">📱</span>
+                <h2>App Innovation</h2>
+                <ul>
+                    <li>Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">⚙️</span>
+                <h2>Service Optimization</h2>
+                <ul>
+                    <li>Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">🌟</span>
+                <h2>Talent Strategy</h2>
+                <ul>
+                    <li>Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">📈</span>
+                <h2>Executive Development</h2>
+                <ul>
+                    <li>Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">🚀</span>
+                <h2>Startup Incubation</h2>
+                <ul>
+                    <li>Foster entrepreneurship and business incubation.</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <span class="icon">💰</span>
+                <h2>Value Creation</h2>
+                <ul>
+                    <li>Deliver real value to shareholders through consistent growth and profitability.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<h2 class="h22">Our Values</h2>
 <section class="value">
+  
 <section id="vision" class="section4 center-aligned">
   <div class="imagess">
     <img src="/images/value.jpg" alt="Vision Image">
 </div>
   <div class="textss">
-      <h2 class="h22">Our Values</h2>
+     
       <ul class="li">
           <li>Working hard to make a difference in the organizations we serve.</li>
           <li>Striving to handle each client with accountability and responsiveness.</li>
@@ -125,6 +173,44 @@ missionObserver.observe(document.getElementById('mission'));
  // Observe the vision section
  visionObserver.observe(document.getElementById('vision'));
  </script>
+ <script>
+  let currentIndex = 0;
+  let slideInterval;
+
+  function showNextSlide() {
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+      currentIndex = (currentIndex + 1) % totalSlides;
+
+      // Reset slides for animation
+      const allSlides = document.querySelectorAll('.slide');
+      allSlides.forEach((slide, index) => {
+          slide.style.opacity = index === currentIndex ? '0' : '1';
+          slide.style.transform = index === currentIndex ? 'translateY(-20px)' : 'translateY(0)';
+      });
+
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Trigger animation for the current slide
+      const currentSlide = allSlides[currentIndex];
+      currentSlide.style.opacity = '1';
+      currentSlide.style.transform = 'translateY(0)';
+  }
+
+  function startSlideShow() {
+      slideInterval = setInterval(showNextSlide, 3000);
+  }
+
+  function stopSlideShow() {
+      clearInterval(slideInterval);
+  }
+
+  document.querySelector('.slider').addEventListener('mouseenter', stopSlideShow);
+  document.querySelector('.slider').addEventListener('mouseleave', startSlideShow);
+
+  startSlideShow(); // Start the slideshow initially
+</script>
+
 
   </main>
   <%- include('partials/footer') %>
