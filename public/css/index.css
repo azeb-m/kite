@@ -1025,6 +1025,7 @@ body {
         padding-left: 0; /* Remove left padding on smaller screens */
         text-align:center; /* Center text on smaller screens */
         width: 25rem;
+        margin-right: -10rem;
     }
 }
 
