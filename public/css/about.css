@@ -15,6 +15,8 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-image: url(/images/new.jpeg);
+  background-size: cover;
+
   height: 600px;
   margin-top: -100px;
 }
@@ -119,7 +121,8 @@ html {
   }
 
   .text {
-    text-align: center;
+    text-align: left;
+    
    
     
   }
@@ -132,7 +135,7 @@ html {
 
 .section3 {
   display: flex;
-  overflow: hidden;
+  
   justify-content: space-between; /* Space between image and text */
   align-items: center; /* Center vertically */
   padding: 40px 20px;
@@ -270,18 +273,18 @@ p {
     width:200px;
     
   }
- 
+  .section1 h1{
+    font-size: 100rem;
+  }
   
   .textss {
       padding-left: 200px; /* Adjust padding for larger screens */
   }
+  
 }
 @media (min-width: 480px) {
 
-  .section3{
-    
-    text-align: left;
-  }}
+  }
 /*for mision*/
 
 .slider-container {
@@ -357,6 +360,16 @@ li {
   margin-right: 20px; /* Space between image and slider */
 }
 @media (max-width: 768px) {
+  .section3{
+    margin: 140px;
+  }
+  .section1{
+    object-fit: contain;
+  }
+  .section1 h1{
+    font-size: 50px;
+    margin-left: -5rem;
+  }
   .slide {
       padding: 15px; /* Adjust padding for smaller screens */
   }
@@ -365,6 +378,14 @@ li {
   }
   .slider-image {
       max-width: 120px; /* Smaller images on medium screens */
+  }
+  .newtext{
+    margin-left: -100px;
+    margin-top: -200px;
+
+  }
+  .images{
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -380,10 +401,13 @@ li {
   .slider-image {
       display: none;
   }
-
+   
   .newtext{
     margin-left: -100px;
     margin-top: -200px;
+  }
+  .section1{
+    background-image: url(/images/sale7.png);
   }
 }
 

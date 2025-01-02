@@ -150,38 +150,57 @@ body {
   }
 
   .product-item {
-
-   padding: 100px;
+    padding: 50px 15px; /* Adjust padding for mobile */
   }
 
-
   .product-item h3 {
-    font-size: 1.5rem;
-    width: 200px;
+    font-size: 1.5rem; /* Smaller heading */
   }
 
   .product-item p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller paragraph text */
   }
 
-  .section-header{
+  .section-header {
     padding-top: 50px;
-
-  
   }
 
-  /* Add Card Flip Animation */
-  .product-item.flip .product-image {
-    transform: rotateY(180deg); /* Flip image */
+  .product-info p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    text-align: center; /* Center text */
   }
 
-  .product-item.flip .product-info {
-    transform: rotateY(0); /* Flip the text */
+  .product-info h4 {
+    font-size: 0.9rem; /* Adjust heading size */
   }
 
-  /* Smooth scrolling transition */
-  .products-container {
-    transform: translateY(0);
-    transition: transform 0.5s ease-out;
+  .functionalities-list li {
+    font-size: 0.9rem; /* Adjust functionalities list item size */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 2rem; /* Adjust section header size for smaller screens */
+  }
+
+  .product-item h3 {
+    font-size: 1.3rem; /* Further adjust heading size for smaller screens */
+  }
+
+  .product-item p {
+    font-size: 0.9rem; /* Further adjust paragraph size */
+  }
+
+  .product-info h4 {
+    font-size: 0.8rem; /* Further adjust functionalities heading size */
+  }
+
+  .functionalities-list li {
+    font-size: 0.8rem; /* Further adjust functionalities list item size */
+
+  }
+  .product-image{
+    display: none;
   }
 }
