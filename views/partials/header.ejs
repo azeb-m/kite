@@ -28,6 +28,7 @@
             background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
             backdrop-filter: blur(10px); /* Apply blur effect */
             height: 110px;
+            
         }
 
         .container-fluid img {
@@ -199,24 +200,27 @@
         
         }
         .container-fluid img{
-          margin-left: -100px;
+          margin-left: -150px;
           gap: 10px;
 
         }
         .container-fluid span{
-          margin-left: -100px;
-          margin: -15px;
+          margin-left: -60px;
           gap: 10px;
 
         }
+        .navbar-toggler{
+          max-height: 50px;
+          
+         
+        }
+
         .navbar-toggler-icon{
           max-width: 25px;
-          margin-right: -100px;
+          margin-right: -60px;
+          
         }
-        .navbar-toggler {
-          max-height: 30px;
-          padding: -50;
-        }
+        
         
         .navbar-nav  .nav-item {
           background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
@@ -227,16 +231,25 @@
           gap: 10px;
         }
         }
- 
-        @media (max-width: 575.97px) and (max-width: 300px){
+
+        @media (min-width: 200px) and (max-width: 575.97px){
           .container-fluid img{
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
+            padding-left: -80px;
+            
+            
           }
-          .container-fluid span {
-            font-size: 20px;
+          .container-fluid span{
+            font-size: 15px;
+           
           }
+          
+          
+
         } 
+ 
+      
        
 
     </style>
@@ -284,7 +297,7 @@
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                   >
-                  Our praduct
+                  Our product
                   </a>
                   <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="our_products#product1">COMee</a></li>
