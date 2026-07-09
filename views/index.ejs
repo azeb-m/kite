@@ -1,152 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance - KITE LLC</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
-    <link rel="stylesheet" href="/css/portfolio.css"> <!-- Link to portfolio CSS -->
-    <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
-    <title><%= title %></title>
-    <script src="/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Animated gradient background representing the brand colors */
+            background: linear-gradient(-45deg, #15635E, #27A89F, #1E8C85, #30C7BD);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Abstract background shapes */
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 50%;
+            z-index: 0;
+            animation: floatShape 20s infinite linear;
+        }
+        .shape-1 { width: 300px; height: 300px; top: -100px; left: -100px; animation-duration: 25s; }
+        .shape-2 { width: 400px; height: 400px; bottom: -150px; right: -100px; animation-duration: 20s; animation-direction: reverse; }
+        .shape-3 { width: 150px; height: 150px; top: 20%; right: 15%; animation-duration: 15s; }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes floatShape {
+            0% { transform: rotate(0deg) translate(0, 0) scale(1); }
+            33% { transform: rotate(120deg) translate(50px, 50px) scale(1.1); }
+            66% { transform: rotate(240deg) translate(-50px, 50px) scale(0.9); }
+            100% { transform: rotate(360deg) translate(0, 0) scale(1); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            position: relative;
+            margin: auto;
+        }
+
+        .icon-container {
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        .icon-container img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px; /* Optional: if the logo needs rounded corners */
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .status-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .status-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-icon {
+            background: rgba(255, 255, 255, 0.15);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .status-item:hover .status-icon {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .status-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .progress-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .progress-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 8px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            background: #fff;
+            height: 100%;
+            width: 30%;
+            border-radius: 10px;
+            position: absolute;
+            animation: loading 2s infinite ease-in-out;
+        }
+
+        @keyframes loading {
+            0% { left: -30%; width: 30%; }
+            50% { left: 30%; width: 40%; }
+            100% { left: 100%; width: 30%; }
+        }
+
+        .loading-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .kite-branding {
+            display: block;
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .glass-card {
+                padding: 40px 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .status-info {
+                gap: 20px;
+            }
+            .icon-container {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    
+    <!-- Abstract background shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
 
-    <!-- Welcome Section -->
-    <%- include('partials/header') %> <!-- Include the header -->
-<section class="welcome-section">
-  
-    <div class="welcome-text">
-      
-        <div class="carousel-item active">
-            <img src="/images/sale-5.png" style="width: 100vw; height: 100%; object-fit:contain stretch; filter: brightness(0.5);">
-            <div class="carousel-container">
-                <h1 class="title">Welcome To Kite LLC</h1>
-                <p class="description">Kite LLC is an  IT solution provider based in Dubai.</p>
+    <div class="glass-card">
+        <div class="icon-container">
+            <img src="/images/logo.jpg" alt="KITE LLC Logo">
+        </div>
+
+        <h1>We'll Be Back Soon!</h1>
+        <p class="subtitle">
+            We are currently down for scheduled maintenance. We're upgrading our systems to provide you with a better, faster, and more reliable experience.
+        </p>
+
+        <div class="status-info">
+            <div class="status-item">
+                <div class="status-icon"><i class="fas fa-hammer"></i></div>
+                <div class="status-label">Maintenance</div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon"><i class="fas fa-cog fa-spin"></i></div>
+                <div class="status-label">In Progress</div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon"><i class="fas fa-rocket"></i></div>
+                <div class="status-label">Coming Soon</div>
             </div>
         </div>
 
-        
-    <div class="container" id="sec-1" class="section-scroll-down">
-      <a href="#sec-2">
-        <div class="scroll-down"></div>
-      </a>
+        <div class="progress-wrapper">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-text">Working...</div>
+        </div>
+
+        <div class="footer-text">
+            Thank you for your patience and understanding.
+            <span class="kite-branding">KITE LLC</span>
+        </div>
     </div>
-    
-</section>
-
-
-<section class="mission-section" id="missionSection">
-  <div class="mission-image">
-      <img src="/images/about.png" alt="Mission Image">
-  </div>
-  <div class="mission-content">
-      <span class="mission-label"><a href="/about">About Us</a></span>
-      <h2 class="mission-text">
-        Kite LLC provides IT and digital solutions that leverage technology to enhance business operations. Our services include custom software development, integrated system design, on-site technical support, and digital content management. We focus on creating tailored solutions to meet diverse business needs.
-      </h2>
-  </div>
-</section>
-
-      
-
-   
-
-
-<section class="vision-mission-section">
-  <div class="vision-mission-card">
-    <h3>Our Vision</h3>
-    <p>Unlocking technology potential to help organizations innovate, deliver superior
-       customer experience, and perform better.</p>
-    <div class="border-icon icon-1">
-      <i class="fa-regular fa-eye"></i><!-- Vision Icon -->
-    </div>
-  </div>
-
-  <div class="vision-mission-card">
-    <h3>Our Mission</h3>
-    <p>Deliver innovative IT solutions, business services, talent development, and 
-      entrepreneurship support, driving growth, efficiency, and value.</p>
-    <div class="border-icon icon-2">
-    <i class="fa-solid fa-bullseye"></i> <!-- Mission Icon -->
-    </div>
-  </div>
-
-  <div class="vision-mission-card">
-    <h3>Our Values</h3>
-    <p>Committed to excellence, innovation, accountability, and building a collaborative, 
-      respectful environment that empowers clients and team members.</p>
-    <div class="border-icon icon-3">
-     <i class="fa-solid fa-diamond"></i><!-- Icon for the additional card -->
-    </div>
-  </div>
-</section>
-
-
-
-<section class="value">
-  <section id="vision" class="section4 center-aligned">
-      <h2 class="title1">Our Services</h2> <!-- Title at the top center -->
-      <div class="content">
-          <div class="imagess">
-              <img src="/images/software.png" alt="Vision Image">
-          </div>
-          <div class="textss">
-            <h3 class="h22">IT and Digital Solutions</h3>
-              <ul class="li">
-                  <li>These services enhance business operations through technology 
-                    by developing and managing IT systems and digital content. Key 
-                    offerings include custom software and website design, integrated
-                     computer system planning, on-site technical support, and the 
-                     creation of multimedia and online content.</li>
-                  
-              </ul>
-              
-          </div>
-
-          
-      </div>
-
-  </section>
-
-</section>
-    
-
-
- <!-- Portfolio Section -->
-    <section id="portfolio-section" class="portfolio-section">
-      <%- include('portfolio') %> <!-- Include the portfolio -->
-    </section>
-    <section class="clients-section">
-  <h2>Satisfied Clients</h2>
-  <div class="clients-logos">
-    <div class="client-logo bits">
-      <img src="/images/bits.jpg" alt="Client 1" />
-    </div>
-    
-    <div class="client-logo serianu">
-      <img src="/images/serianu.jpg" alt="Client 3" />
-    </div>
-    <div class="client-logo">
-      <img src="/images/disaster.jpg" alt="Client 4" />
-    </div>
-    <div class="client-logo">
-     <img src="/images/construction.jpg" alt="Client 5" />
-    </div>
-  </div>
-</section>
-<section id="popup" class="popup">
-        <%- include('chat-popup') %> <!-- Include the portfolio -->
-    </section>
-<!-- Footer Include -->
-<%- include('partials/footer') %>
-    
 </body>
-
 </html>

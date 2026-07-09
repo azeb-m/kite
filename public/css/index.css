@@ -1,1046 +1,419 @@
-
-
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  background-color: #EAE3EA;
-  margin: 90px;
-  font-family: Arial, sans-serif; 
-  
-  
-  
+    font-family: 'Open Sans', 'Roboto', 'Nunito Sans', sans-serif;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
-
-
-
-.welcome-container {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  overflow-x: hidden;
-  max-width: 1200px; 
-}
-
-
-.welcome-text {
-  flex: 1;
-  max-width: 100%; 
-  margin-right: 20px; 
-   
-}
-
-.welcome-text h1 {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.welcome-text p {
-  
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-
-
-.btn-get-started:hover {
-  background-color: #e0b050; /* Slightly lighter golden shade on hover */
-}
-
-
-.welcome-image {
-  flex: 1; 
-  max-width: 50%; 
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-.welcome-image img {
-  max-width: 100%; 
-  height: auto; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-}
-
-
-.hero-section {
-  text-align: left; 
-  padding: 50px 20px;
-  background-color: #EAE3EA;
-}
-
-
-
-
-.subtitle {
-  font-size: 1.4rem; /* Slightly larger for better readability */
-  color: #173D3E; /* Complementary green tone */
-  text-align: center; /* Align with the title */
-  line-height: 1.8; /* Comfortable spacing between lines */
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-style: italic; /* Adds a touch of elegance */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #d9a23e; 
-  color: #FFFFFF; 
-  text-decoration: none; 
-  font-size: 1.1rem; 
-  font-weight: bold;
-  border: 2px solid #d9a23e; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #d9a23e; 
-  color: #000; 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
-  transform: scale(1.05); 
-}
-
-.welcome-text, .welcome-image {
-  background-color: rgba(255, 255, 255, 0); 
-  color: inherit; 
-}
-
-.hero-section {
-  background-color: rgba(255, 255, 255, 0); 
-  color: #111; 
-}
-
-.mission-section {
-  overflow-x: hidden;
-  background-color:none; 
-  color: #EAE3EA;
-  padding: 60px 20px; 
-  position: relative;
-  overflow: hidden; 
-}
-
-
-
-
-
-
-
-.mission-content {
-  position: relative;
-  z-index: 1; 
-  max-width: 800px;
-  margin: 0 auto; 
-  text-align: left; 
-}
-
-.mission-label {
-  display: inline-block;
-  background-color: none; 
-  color: #111; 
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase; 
-  border-radius: 4px;
-  margin-bottom: 20px; 
-  width: 180px;
-  border-radius: 5px;
-  overflow-x: hidden;
-}
-
-/* Mission Text Styling */
-.mission-text {
-  font-size: 1.2rem; /* Larger text size for visibility */
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-  
-}
-
-/* Our Strong Customers Section */
-.customers-section {
-  margin-top: 50px; /* Adds space above the section */
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #EAE3EA;
-}
-
-.customers-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 30px; /* Space between title and logos */
-}
-
-.customer-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.customer-logos img {
-  height: 70px; /* Adjust height of the logos */
-  max-width: 100%; /* Ensure logos are responsive */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-/* Optional: Hover effect on logos */
-.customer-logos img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .welcome-container {
-    flex-wrap: wrap; /* Stack elements vertically on small screens */
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .welcome-text, .welcome-image {
-    max-width: 100%; /* Full width for both containers */
-    margin: 0;
-  }
-
-  .welcome-image {
-    margin-top: 30px; /* Add space between stacked elements */
-  }
-
-  .welcome-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .welcome-text p {
-    font-size: 1rem;
-  }
-
-  .btn-get-started {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  /* Hero Section for Smaller Screens */
-  .hero-section {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 30px 10px;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 18px;
-  }
-}
-/* Clients Section Styling */
-.clients-section {
-  overflow-x: hidden;
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #EAE3EA;
-}
-
-.clients-section h2 {
-  font-size: 2.5rem;
-  color: #333; /* Black color */
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.clients-section h2::after {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background-color: #d9a23e; /* Yellowish underline */
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.clients-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.client-logo img {
-  max-width: 120px; /* Adjust the size of the logos */
-  max-height: 120px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-.bits img{
- max-width: 250px; /* Adjust the size of the logos */
-  max-height: 250px;
-}
-.serianu img{
-   max-width: 250px; /* Adjust the size of the logos */
-  max-height: 250px;
-}
-.client-logo img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
-}
-.vision-mission-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 50px 20px;
- background: none;
-  color: #333; /* Dark text */
-}
-
-.vision-mission-card {
-  position: relative;
-  border: 2px solid #333; /* Golden yellow border */
-  border-radius: 12px;
-  padding: 40px 20px 20px; /* Extra padding for the top icon */
-  width: 30%;
-  text-align: center;
-  background-color: #EAE3EA;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vision-mission-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
-}
-
-.vision-mission-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333; /* Golden yellow heading */
-}
-.vision-mission-card h3 {
-  position: relative; /* Add position relative to allow positioning of the ::before element */
- font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333; /* Golden yellow heading */
-}
-
-.vision-mission-card h3::before {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background-color: #d9a23e; /* Golden yellow underline */
-  bottom: -10px; /* Adjusted to position below the text */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.vision-mission-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333; /* Dark text */
-}
-
-/* Top Border Icons - Even Smaller Circle */
-.border-icon {
-  position: absolute;
-  top: -12px; /* Slightly adjusted to reduce space from the top */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem; /* Further reduced icon size */
-  color: #333; /* Golden yellow icon */
-  background-color: #EAE3EA;
-  padding: 6px; /* Further reduced padding for a smaller circle */
-  border-radius: 50%; /* Circular shape */
-  border: 2px solid #333; /* Golden yellow border */
-}
-
-
-.services-solutions-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg,EAE3EA, EAE3EA );
-  color: #333; /* Dark text */
-}
-
-.services-solutions-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  position: relative;
-  color: #333; /* Golden yellow heading */
-}
-
-.services-solutions-section h2::after {
-  content: "";
-  width: 100px;
-  height: 3px;
-  background-color: #d9a23e; /* Golden yellow underline */
-  display: block;
-  margin: 10px auto 0;
-}
-
-.service-cards {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.service-card {
-  background: #EAE3EA;
-  border: 1px solid #333; /* Golden yellow border */
-  border-radius: 8px;
-  padding: 20px;
-  width: 90%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
-}
-
-.service-card .icon {
-  font-size: 2.5rem; /* Adjusted font size for the icons */
-  color: #333; /* Golden yellow icon */
-  margin-bottom: 10px;
-}
-
-.service-card .service-category {
-  font-weight: bold;
-  position: relative; /* Add position relative to allow positioning of the ::before element */
- font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333; /* Golden yellow heading */
-}
-
-.service-card p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  color: #333; /* Dark text */
-}
-
-.service-card .read-more {
-  display: inline-block;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  color: #ffffff; /* White text */
-  background-color: #d9a23e; /* Golden yellow button */
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.service-card .read-more:hover {
-  background-color: #b78a2e; /* Darker golden yellow */
-}
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
-}
-
-.service-card {
-  background: #EAE3EA;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 20px;
-  width: 30%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
-}
-
-
-.vision-mission-section {
-  overflow-x: hidden;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 50px 20px;
-  background: none;
-  color: #333;
-}
-
-.vision-mission-card {
-  position: relative;
-  border: 2px solid #333;
-  border-radius: 12px;
-  padding: 40px 20px 20px;
-  width: 30%; /* Default: three cards per row */
-  text-align: center;
-  background-color: #EAE3EA;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vision-mission-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3);
-}
-
-.vision-mission-card h3::before {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background-color: #d9a23e;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 780px) {
-  .vision-mission-section {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center;   /* Center the stacked cards */
-    gap: 30px;             /* Increase space between cards */
-  }
-
-  .vision-mission-card {
-    width: 90%; /* Cards occupy most of the screen width */
-    margin: 0 auto; /* Center the cards */
-  }
-   .service-card {
-    width: 80%; /* Set the width to a smaller percentage for smaller screens */
-    
-    margin: 0 auto; /* Center the single card */
-    
-  }
-  
-  .service-cards{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 50%;
-  }
-   .welcome-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .welcome-text, .welcome-image {
-    max-width: 100%; /* Ensure the elements take up full width */
-    margin: 0;
-  }
-
-  .welcome-image {
-    margin-top: 20px; /* Add some space between the sections */
-  }
-
-  .hero-section {
-    padding: 230px 10px;
-    text-align: center; /* Center text in hero section for smaller screens */
-  }
-
-  .welcome-image img {
-    max-width: 90%; /* Ensure image is responsive */
-    height: auto;
-  }
-
-  /* Move the welcome image below the hero section */
-  .welcome-section {
-    display: block; /* Stack everything */
-    width: 100vw;
-  }
-
-  /* For the hero section's title and subtitle */
-  .main-title {
-    font-size: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 18px;
-  }
-}
-
-/* for image */
-
-
+/* Welcome / Hero Section */
 .welcome-section {
-
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%; /* Adjust height for responsiveness */
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
 }
+
 .carousel-item {
-  position: absolute;
-  width: 100%;
-  height: 650px;
-  margin-right: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.carousel-item.active {
-  opacity: 1;
-}
-.carousel-container {
-  position: absolute;
-  top: 50%;
-  left: 20px; /* Position text on the left */
-  transform: translateY(-50%); /* Center vertically */
-  color: #33ffff; /* Change text color to yellow */
-  font-family: sans-serif;
-  font-weight: bolder;
-  padding: 20px;
-  text-align: left; /* Align text to the left */
-  max-width: 90%; /* Responsive text container */
-}
-.title, .description {
-  opacity: 0; /* Start hidden */
-  transform: translateY(30px); /* Start slightly below */
-  animation-duration: 1s; /* Animation duration */
-  animation-fill-mode: forwards; /* Keep the final state */
-}
-.description{
-  color: #33ffff;
-  font-size: 1.2rem;
-  font-family:Arial, Helvetica, sans-serif !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.title.show {
-  animation-name: slideInFromTop;
+.carousel-item.active {
+    opacity: 1;
 }
-.description.show {
-  animation-name: slideInFromBottom;
+
+.carousel-container {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-container .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+.carousel-container .description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
 @keyframes slideInFromTop {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-
-
 
 @keyframes slideInFromBottom {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-@media (max-width: 768px) {
-  .carousel-container {
-      left: 10px; /* Adjust text container for smaller screens */
-  }
-  .title, .description {
-      font-size: 1.2em; /* Adjust font size */
-  }
-}
-
-@media (max-width: 489px) {
-  .carousel-container {
-      left: 5px; /* Further adjust for very small screens */
-  }
-  .title, .description {
-      font-size: 3em; /* Smaller font size */
-  }
-  
-  .welcome-text h1 {
-    font-size: 1.3rem;
-  }
-  .welcome-text p {
-    font-size: 0.7rem;
-  }
-  .mission-image img{
-    margin-top: -200;
-  
-  }
-
-.welcome-section {
-   content: url('/images/sale8.png');
-   height: 30rem;
-   
-}
-.mission-image{
-  display: none;
-}
-}
-  /* .welcome-section {
-    height: 500px
-  
-
-
-
-/* scrol down */
-
- 
-.section-scroll-down{
-  overflow-x: hidden;
-  min-height: 50vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .scroll-down {
-  height: 50px;
-  width: 30px;
-  border: 2px solid rgb(0, 0, 0);
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  border-radius: 50px;
-  cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .scroll-down::before,
 .scroll-down::after {
-  content: "";
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  height: 10px;
-  width: 10px;
-  transform: translate(-50%, -100%) rotate(45deg);
-  border: 2px solid black;
-  border-top: transparent;
-  border-left: transparent;
-  animation: scroll-down 1s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid white;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1.5s ease-in-out infinite;
 }
+
 .scroll-down::before {
-  top: 30%;
-  animation-delay: 0.3s;
-  /* animation: scroll-down 1s ease-in-out infinite; */
+    top: 30%;
+    animation-delay: 0.3s;
 }
 
 @keyframes scroll-down {
-  0% {
-    /* top:20%; */
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    top: 90%;
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
 }
 
-
-/* about */
+/* Mission Section */
 .mission-section {
-  display: flex;
-  align-items: center;
-  background: none; /* #2E8F83 to dark gradient */
-  color: #fff; /* White text */
-  padding: 50px 20px;
-  text-align: left;
-  position: relative;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease; /* Fade-in effect */
-  width: 100%;
-  margin-top: -50px;
-  margin-bottom: -2000;
-  
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #EAE3EA, #fff);
+    padding: 80px 50px;
+    gap: 50px;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
-.mission-content {
-  max-width: 600px;
-  padding: 20px;
-  margin-left: 20px;
-  background: #d0f0f0; /* Dark background for content */
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transform: translateX(100%); /* Start off-screen to the right */
-  transition: transform 1s ease; /* Slide-in effect */
-}
-.mission-label {
-  display: block;
-  font-size: 1.5em; /* Increased font size */
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: yellow; /* Yellow color */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow */
-}
-.mission-label a {
-  color: yellow; /* Yellow link color */
-  text-decoration: none;
-  font-family: sans-serif;
-  transition: color 0.3s;
-}
-.mission-label a:hover {
-  color: #33ffff; /* Change to white on hover */
-}
-.mission-text {
-  font-size: 1.5em; /* Increased font size */
-  line-height: 1.8; /* Improved line height */
-  margin-top: 20px;
-  color: black; /* White text */
-  font-family: "open Sans", sans-serif;
-  
-}
+
 .mission-image {
-  flex: 1;
-  max-width: 100%; /* Set max width for the image */
-  margin-right: 20px;
-  padding-left: 100px;
-  object-fit:contain stretch;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(-100%); /* Start off-screen to the left */
-  transition: opacity 1s ease, transform 1s ease; /* Fade and slide in */
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
 }
+
 .mission-image img {
-  width: 100%; /* Make image responsive */
-  height: 500px; /* Fixed height */
-  border-radius: 10px;
-  
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
-  .mission-text {
-      font-size: 1.4em; /* Adjusted for smaller screens */
-  }
-  .mission-label {
-      font-size: 1.2em; /* Adjusted for smaller screens */
-  }
-  .mission-section {
-      flex-direction: column; /* Stack on smaller screens */
-      align-items: center;
-  }
-  .mission-content {
-      margin-left: 0;
-      margin-top: 20px;
-  }
-  .mission-image {
-      max-width: 100%; /* Full width on small screens */
-      margin-right: 0;
-      height: auto; /* Maintain aspect ratio */
-      margin-top: -100px;
-    
-  }
+.mission-content {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateX(100px);
+    transition: transform 1s ease;
 }
 
-/* our servic */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: #f4f4f4; /* Light background for the whole page */
+.mission-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d9a23e;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
 }
+
+.mission-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Vision Mission Values Section */
+.vision-mission-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+    background: #EAE3EA;
+}
+
+.vision-mission-card {
+    position: relative;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 50px 30px 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(217, 162, 62, 0.3);
+}
+
+.border-icon {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    background: #EAE3EA;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vision-mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+.vision-mission-card h3::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #d9a23e;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vision-mission-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 25px;
+}
+
+/* Services Section */
 .services-solutions-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
-  text-align: center;
-  opacity: 0; /* Start hidden */
-  visibility: hidden; /* Prevent interaction when hidden */
-  transition: opacity 1s ease-in; /* Fade-in effect */
+    padding: 80px 50px;
+    background: white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
 }
+
+.services-solutions-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.services-solutions-section h2::after {
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: #d9a23e;
+    display: block;
+    margin: 15px auto 0;
+}
+
 .service-cards {
-  display: grid;
-  
- 
-
-  justify-content: space-between; /* Space between cards */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  max-width: 1000px; /* Max width for the container */
-  margin: 0 auto; /* Center the container */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .service-card {
-  background: #f9f9f9; /* Match the section background color */
-  border: none; /* No border */
-  border-radius: 10px;
-  box-shadow: none; /* No shadow */
-  margin: 20px; /* Margin around each card */
-  padding: 10px;
-  text-align: left;
-  width: 25px; /* Fixed width for cards */
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Start lower */
-  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
-}
-.service-image {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px;
-  margin-bottom: 15px; /* Space below the image */
-  opacity: 0; /* Start hidden */
-  transform: translateX(-50px); /* Start from the left */
-  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
-}
-.service-category {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 10px; /* Space below category */
-  opacity: 0; /* Start hidden */
-  transform: translateX(50px); /* Start from the right */
-  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
+    background: #EAE3EA;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-
-
-
-
-
-
-.h22 {
-  margin: 0 0 10px; /* Space below heading */
-  color: aqua;
-  align-items: center;
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-  /* value */
-  .value {
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Light background for the whole page */
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.section4 {
+.service-card .service-category {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-card .read-more {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #d9a23e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.service-card .read-more:hover {
+    background: #b78a2e;
+}
+
+/* Clients Section */
+.clients-section {
+    padding: 80px 50px;
+    text-align: center;
+    background: #EAE3EA;
+}
+
+.clients-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.clients-section h2::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: #d9a23e;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clients-logos {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    padding: 40px 20px;
-    background-color: #f9f9f9; /* Light background for contrast */
-    margin: 0 auto; /* Center the section */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease; /* Fade transition */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.title1 {
-    margin-bottom: 20px; /* Space below heading */
-    color: goldenrod;
-    text-align: center; /* Center the heading */
-    
+.client-logo {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.content {
-    display: flex;
-    flex-direction: row; /* Row layout for larger screens */
-    width: 100%; /* Full width */
-    align-items: center; /* Align items vertically */
+.client-logo:hover {
+    transform: scale(1.05);
 }
 
-.imagess {
-    flex: 1; /* Take up available space */
-    text-align: center; /* Center image */
-    transform: translateY(-130px); /* Start above */
-    transition: transform 3s ease; /* Slide transition */
-    margin-right: 20px; /* Add space to the right */
+.client-logo img {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
 }
 
-.textss {
-    flex: 1; /* Take up available space */
-    transform: translateX(130px); /* Start from the right */
-    transition: transform 3s ease; /* Slide transition */
-    padding-left: 20px; /* Adjust padding to fit layout */
-    padding-right: 150px;
-    
-    font-family: "open Sans", sans-serif;
-    
-    
-}
-
-.section4.visible {
-    opacity: 1; /* Make visible */
-}
-
-.section4.visible .imagess {
-    transform: translateY(0); /* Move to original position */
-}
-
-.section4.visible .textss {
-    transform: translateX(0); /* Move to original position */
-}
-
-.imagess img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-}
-
-.li {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    list-style-type: none; /* Remove bullet points */
-    text-align: left; /* Align text to the left */
-    justify-items: left;
-}
-
-@media (max-width: 600px) {
-    .content {
-        flex-direction: column; /* Stack on smaller screens */
-        align-items: center; /* Center items */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-section {
+        flex-direction: column;
+        padding: 50px 20px;
     }
-    .imagess {
-        margin-right: 0; /* Remove right margin on smaller screens */
+
+    .carousel-container {
+        left: 30px;
+        right: 30px;
     }
-    .textss {
-        padding-left: 0; /* Remove left padding on smaller screens */
-        text-align:center; /* Center text on smaller screens */
-        width: 25rem;
-        margin-right: -10rem;
+
+    .carousel-container .title {
+        font-size: 2.5rem;
+    }
+
+    .carousel-container .description {
+        font-size: 1.2rem;
     }
 }
 
+@media (max-width: 768px) {
+    .vision-mission-section {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.title1::after {
-  content: "";
-  width: 100px;
-  height: 3px;
-  background-color: #d9a23e; 
-  display: block;
-  margin: 10px auto 0;
+    .vision-mission-card {
+        width: 90%;
+    }
+
+    .services-solutions-section {
+        padding: 50px 20px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-section {
+        padding: 50px 20px;
+    }
 }
-
-
-
-/* readmor */
-
-
